@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 11:42-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../general/introduction.rst:4
+msgid "Introduction"
+msgstr ""
+
+#: ../../general/introduction.rst:6
+msgid "MusicBrainz Picard is a cross-platform music file tagger. The software is open source and is developed by the `MetaBrainz Foundation <https://metabrainz.org/>`_. It is also **very** extensible via the use of plugins, which can add additional functionality to the base program."
+msgstr ""
+
+#: ../../general/introduction.rst:8
+msgid "This site contains user guides for various Picard plugins developed or maintained by Bob Swift. Each guide provides comprehensive information related to the use of a specific plugin, including configuration options, usage details and examples. It also provides links to additional information including the GitHub repository containing the source code for the plugin."
+msgstr ""
+
+#: ../../general/introduction.rst:10
+msgid "Problems with the documentation or suggestions for improvements can be reported via the `issues tracker <https://github.com/rdswift/picard-plugins-user-guides/issues>`_ on GitHub."
+msgstr ""
+
+#: ../../general/introduction.rst:14
+msgid "If you find a plugin useful, please consider making a donation to the `MetaBrainz Foundation <https://metabrainz.org/donate>`_ to support the continued development of MusicBrainz Picard and related projects."
+msgstr ""

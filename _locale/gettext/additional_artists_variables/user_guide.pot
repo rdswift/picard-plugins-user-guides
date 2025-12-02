@@ -1,0 +1,837 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 11:42-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../additional_artists_variables/user_guide.rst:2
+msgid "Additional Artists Variables"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:7
+msgid "This plugin provides specialized album and track variables for use in naming scripts. It is based on the \"Album Artist Extension\" plugin, but expands the functionality to also include track artists."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:11
+msgid "This plugin cannot be used as a direct drop-in replacement for the \"Album Artist Extension\" plugin because the variables are provided with different names. This will require changes to existing scripts if switching to this plugin."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:15
+msgid "This plugin makes no additional calls to the MusicBrainz website api for the information."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:19
+msgid "What it Does"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:21
+msgid "This plugin reads the album and track metadata provided to Picard and exposes the information in a number of additional variables for use in Picard scripts. The plugin has been designed such that the information is presented consistently regardless of whether or not the `Use standardized artist names` option is selected. This means that some of the information available through the standard Picard tags will be duplicated in the variables provided by this plugin."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:25
+msgid "Option Settings"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:27
+msgid "The plugin has no option settings."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:31
+msgid "Variables Created"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:34
+msgid "Album Variables"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:36
+msgid "**_artists_album_primary_id** - The ID of the primary / first album artist listed"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:37
+msgid "**_artists_album_primary_std** - The primary / first album artist listed (standardized)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:38
+msgid "**_artists_album_primary_sort** - The primary / first album artist listed (sort name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:39
+msgid "**_artists_album_primary_cred** - The primary / first album artist listed (as credited)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:40
+msgid "**_artists_album_primary_cred_sort** - The primary / first album artist listed (sort name as credited)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:41
+msgid "**_artists_album_primary_legal** - The primary / first album artist listed (legal name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:42
+msgid "**_artists_album_primary_sort_legal** - The primary / first album artist listed (sort legal name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:43
+msgid "**_artists_album_primary_tags** - The primary / first album artist tags (limited to 'Maximum number of genres' setting in Picard configuration), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:44
+msgid "**_artists_album_additional_id** - The IDs of all album artists listed except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:45
+msgid "**_artists_album_additional_std** - All album artists listed (standardized) except for the primary / first artist, separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:46
+msgid "**_artists_album_additional_cred** - All album artists listed (as credited) except for the primary / first artist, separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:47
+msgid "**_artists_album_additional_sort** - All album artists listed (sort names) except for the primary / first artist, separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:48
+msgid "**_artists_album_additional_cred_sort** - All album artists listed (sort names as credited) except for the primary / first artist, separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:49
+msgid "**_artists_album_additional_legal** - All album artists listed (legal names) except for the primary / first artist, separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:50
+msgid "**_artists_album_additional_std_multi** - All album artists listed (standardized) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:51
+msgid "**_artists_album_additional_cred_multi** - All album artists listed (as credited) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:52
+msgid "**_artists_album_additional_sort_multi** - All album artists listed (sort names) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:53
+msgid "**_artists_album_additional_cred_sort_multi** - All album artists listed (sort names as credited) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:54
+msgid "**_artists_album_additional_legal_multi** - All album artists listed (legal names) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:55
+msgid "**_artists_album_all_std** - All album artists listed (standardized), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:56
+msgid "**_artists_album_all_sort** - All album artists listed (sort names), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:57
+msgid "**_artists_album_all_cred** - All album artists listed (as credited), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:58
+msgid "**_artists_album_all_cred_sort** - All album artists listed (sort names as credited), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:59
+msgid "**_artists_album_all_legal** - All album artists listed (legal names), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:60
+msgid "**_artists_album_all_std_multi** - All album artists listed (standardized), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:61
+msgid "**_artists_album_all_sort_multi** - All album artists listed (sort names), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:62
+msgid "**_artists_album_all_cred_multi** - All album artists listed (as credited), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:63
+msgid "**_artists_album_all_cred_sort_multi** - All album artists listed (sort names as credited), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:64
+msgid "**_artists_album_all_legal_multi** - All album artists listed (legal names), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:65
+msgid "**_artists_album_all_sort_primary** - The primary / first album artist listed (sort name) followed by all additional album artists (standardized), separated by strings provided from the release entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:66
+msgid "**_artists_album_all_types** - All album artist types, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:67
+msgid "**_artists_album_all_join_phrases** - All album artist join phrases, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:68
+msgid "**_artists_album_all_count** - The number of artists listed as album artists"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:71
+msgid "Track Variables"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:73
+msgid "**_artists_track_primary_id** - The ID of the primary / first track artist listed"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:74
+msgid "**_artists_track_primary_std** - The primary / first track artist listed (standardized)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:75
+msgid "**_artists_track_primary_sort** - The primary / first track artist listed (sort name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:76
+msgid "**_artists_track_primary_cred** - The primary / first track artist listed (as credited)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:77
+msgid "**_artists_track_primary_cred_sort** - The primary / first track artist listed (sort as credited name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:78
+msgid "**_artists_track_primary_legal** - The primary / first track artist listed (legal name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:79
+msgid "**_artists_track_primary_sort_legal** - The primary / first track artist listed (sort legal name)"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:80
+msgid "**_artists_track_additional_id** - The IDs of all track artists listed except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:81
+msgid "**_artists_track_additional_std** - All track artists listed (standardized) except for the primary / first artist, separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:82
+msgid "**_artists_track_additional_cred** - All track artists listed (as credited) except for the primary / first artist, separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:83
+msgid "**_artists_track_additional_sort** - All track artists listed (sort names) except for the primary / first artist, separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:84
+msgid "**_artists_track_additional_cred_sort** - All track artists listed (sort names as credited) except for the primary / first artist, separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:85
+msgid "**_artists_track_additional_legal** - All track artists listed (legal names) except for the primary / first artist, separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:86
+msgid "**_artists_track_additional_std_multi** - All track artists listed (standardized) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:87
+msgid "**_artists_track_additional_sort_multi** - All track artists listed (sort names) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:88
+msgid "**_artists_track_additional_cred_multi** - All track artists listed (as credited) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:89
+msgid "**_artists_track_additional_cred_sort_multi** - All track artists listed (sort names as credited) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:90
+msgid "**_artists_track_additional_legal_multi** - All track artists listed (legal names) except for the primary / first artist, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:91
+msgid "**_artists_track_all_std** - All track artists listed (standardized), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:92
+msgid "**_artists_track_all_sort** - All track artists listed (sort names), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:93
+msgid "**_artists_track_all_cred** - All track artists listed (as credited), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:94
+msgid "**_artists_track_all_cred_sort** - All track artists listed (sort names as credited), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:95
+msgid "**_artists_track_all_legal** - All track artists listed (legal names), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:96
+msgid "**_artists_track_all_std_multi** - All track artists listed (standardized), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:97
+msgid "**_artists_track_all_sort_multi** - All track artists listed (sort names), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:98
+msgid "**_artists_track_all_cred_multi** - All track artists listed (as credited), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:99
+msgid "**_artists_track_all_cred_sort_multi** - All track artists listed (sort names as credited), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:100
+msgid "**_artists_track_all_legal_multi** - All track artists listed (legal names), as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:101
+msgid "**_artists_track_all_sort_primary** - The primary / first track artist listed (sort name) followed by all additional track artists (standardized), separated by strings provided from the track entry"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:102
+msgid "**_artists_track_all_types** - All track artist types, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:103
+msgid "**_artists_track_all_join_phrases** - All track artist join phrases, as a multi-value"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:104
+msgid "**_artists_track_all_count** - The number of artists listed as track artists"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:108
+msgid "If a legal name alias is not available for an artist, the standardized name will be used for **_artists_album_additional_legal**, **_artists_album_all_legal**, **_artists_track_additional_legal** and **_artists_track_all_legal**, 'n/a' will be used in **_artists_album_additional_legal_multi**, **_artists_album_all_legal_multi**, **_artists_track_additional_legal_multi** and **_artists_track_all_legal_multi**, and the variables **_artists_album_primary_legal**, **_artists_album_primary_sort_legal**, **_artists_track_primary_legal** and **_artists_track_primary_sort_legal** will not be set if there is no legal name alias available for the primary (first) artist.| If a join phrase is empty, a unicode zero-length space (\\\\u200B) will be returned in its place. If a type is empty, a value of 'unknown' will be returned in its place."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:113
+msgid "Examples"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:115
+msgid "The following are some examples using actual information from MusicBrainz:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:118
+msgid "Example 1:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:120
+msgid "Using the single \"`Fairytale of New York <https://musicbrainz.org/release/e428018c-5536-47f7-aca7-581e748b6fd5>`_\" by `Walk Off The Earth <https://musicbrainz.org/artist/e2a5eaeb-7de7-4ffe-a519-e18e427a5060>`_ (credited as \"Gianni and Sarah\"), the additional artist variables created are:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:124
+msgid "**_artists_album_primary_id** = e2a5eaeb-7de7-4ffe-a519-e18e427a5060"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:125
+msgid "**_artists_album_primary_std** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:126
+msgid "**_artists_album_primary_cred** = Gianni and Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:127
+msgid "**_artists_album_primary_sort** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:128
+msgid "**_artists_album_all_std** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:129
+msgid "**_artists_album_all_cred** = Gianni and Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:130
+msgid "**_artists_album_all_sort** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:131
+msgid "**_artists_album_all_legal** = Walk off the Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:132
+#: ../../additional_artists_variables/user_guide.rst:228
+msgid "**_artists_album_all_legal_multi** = \\['n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:133
+msgid "**_artists_album_all_sort_primary** = Walk Off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:134
+#: ../../additional_artists_variables/user_guide.rst:230
+msgid "**_artists_album_all_types** = \\['Group'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:135
+#: ../../additional_artists_variables/user_guide.rst:231
+msgid "**_artists_album_all_count** = 1"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:136
+msgid "**_artists_track_primary_id** = e2a5eaeb-7de7-4ffe-a519-e18e427a5060"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:137
+msgid "**_artists_track_primary_std** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:138
+msgid "**_artists_track_primary_cred** = Gianni and Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:139
+msgid "**_artists_track_primary_sort** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:140
+msgid "**_artists_track_all_std** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:141
+msgid "**_artists_track_all_cred** = Gianni and Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:142
+msgid "**_artists_track_all_sort** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:143
+msgid "**_artists_track_all_legal** = Walk off the Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:144
+msgid "**_artists_track_all_std_multi** = \\['Walk Off The Earth'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:145
+msgid "**_artists_track_all_cred_multi** = \\['Gianni and Sarah'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:146
+msgid "**_artists_track_all_legal_multi** = \\['n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:147
+msgid "**_artists_track_all_sort_primary** = Walk off The Earth"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:148
+msgid "**_artists_track_all_types** = \\['Group'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:149
+msgid "**_artists_track_all_count** = 1"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:151
+msgid "Because there is only one artist associated with this single, the **_artists_album_additional\\_\\***, **_artists_track_additional\\_\\***, **_artists_album_all_join_phrases**, and **_artists_track_all_join_phrases** variables are not created."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:153
+msgid "Because there is no legal name alias for the artist, the **_artists_album_primary_legal**, **_artists_album_primary_sort_legal**, **_artists_track_primary_legal** and **_artists_track_primary_sort_legal** variables are not created."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:156
+msgid "Example 2:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:158
+msgid "Using the single \"`Wrecking Ball <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_\" by `Sarah Blackwood <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_ (primary artist) featuring, `Jenni Pleau <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_ & `Emily Bones <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_, the additional artist variables created are:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:160
+msgid "**_artists_album_primary_id** = af7e5ea9-bd58-4346-8f78-d672e9f297f7"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:161
+msgid "**_artists_album_primary_std** = Sarah Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:162
+msgid "**_artists_album_primary_cred** = Sarah Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:163
+msgid "**_artists_album_primary_sort** = Blackwood, Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:164
+msgid "**_artists_album_primary_legal** = Sarah Nicole Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:165
+msgid "**_artists_album_primary_sort_legal** = Blackwood, Sarah Nicole"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:166
+msgid "**_artists_album_additional_id** = \\['07fa21a9-c253-4ed0-b711-d63f7965b723', '541d331c-f041-4895-b8f2-7db9e27dc5ab'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:167
+msgid "**_artists_album_additional_std** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:168
+msgid "**_artists_album_additional_cred** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:169
+msgid "**_artists_album_additional_sort** = Pleau, Jenni & Bones, Emily"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:170
+msgid "**_artists_album_additional_legal** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:171
+msgid "**_artists_album_additional_std_multi** = \\['Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:172
+msgid "**_artists_album_additional_cred_multi** = \\['Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:173
+msgid "**_artists_album_additional_sort_multi** = \\['Pleau, Jenni', 'Bones, Emily'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:174
+msgid "**_artists_album_additional_legal_multi** = \\['n/a', 'n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:175
+msgid "**_artists_album_all_std** = Sarah Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:176
+msgid "**_artists_album_all_cred** = Sarah Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:177
+msgid "**_artists_album_all_sort** = Blackwood, Sarah, Pleau, Jenni & Bones, Emily"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:178
+msgid "**_artists_album_all_legal** = Sarah Nicole Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:179
+msgid "**_artists_album_all_legal_multi** = \\['Sarah Nicole Blackwood', 'n/a', 'n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:180
+msgid "**_artists_album_all_sort_primary** = Blackwood, Sarah, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:181
+msgid "**_artists_album_all_join_phrases** = \\[', ', ' & '\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:182
+msgid "**_artists_album_all_types** = \\['Person', 'Person', 'Person'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:183
+msgid "**_artists_album_all_count** = 3"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:184
+msgid "**_artists_track_primary_id** = af7e5ea9-bd58-4346-8f78-d672e9f297f7"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:185
+msgid "**_artists_track_primary_std** = Sarah Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:186
+msgid "**_artists_track_primary_cred** = Sarah Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:187
+#: ../../additional_artists_variables/user_guide.rst:188
+msgid "**_artists_track_primary_sort** = Blackwood, Sarah"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:189
+msgid "**_artists_track_primary_legal** = Sarah Nicole Blackwood"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:190
+msgid "**_artists_track_additional_id** = \\['07fa21a9-c253-4ed0-b711-d63f7965b723', '541d331c-f041-4895-b8f2-7db9e27dc5ab'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:191
+msgid "**_artists_track_additional_std** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:192
+msgid "**_artists_track_additional_cred** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:193
+msgid "**_artists_track_additional_sort** = Pleau, Jenni & Bones, Emily"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:194
+msgid "**_artists_track_additional_legal** = Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:195
+msgid "**_artists_track_additional_std_multi** = \\['Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:196
+msgid "**_artists_track_additional_cred_multi** = \\['Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:197
+msgid "**_artists_track_additional_sort_multi** = \\['Pleau, Jenni', 'Bones, Emily'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:198
+msgid "**_artists_track_additional_legal_multi** = \\['n/a', 'n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:199
+msgid "**_artists_track_all_std** = Sarah Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:200
+msgid "**_artists_track_all_cred** = Sarah Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:201
+msgid "**_artists_track_all_sort** = Blackwood, Sarah, Pleau, Jenni & Bones, Emily"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:202
+msgid "**_artists_track_all_legal** = Sarah Nicole Blackwood, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:203
+msgid "**_artists_track_all_std_multi** = \\['Sarah Blackwood', 'Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:204
+msgid "**_artists_track_all_cred_multi** = \\['Sarah Blackwood', 'Jenni Pleau', 'Emily Bones'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:205
+msgid "**_artists_track_all_legal_multi** = \\['Sarah Nicole Blackwood', 'n/a', 'n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:206
+msgid "**_artists_track_all_sort_primary** = Blackwood, Sarah, Jenni Pleau & Emily Bones"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:207
+msgid "**_artists_track_all_join_phrases** = \\[', ', ' & '\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:208
+msgid "**_artists_track_all_types** = \\['Person', 'Person', 'Person'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:209
+msgid "**_artists_track_all_count** = 3"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:211
+msgid "Because there are multiple artists associated with both the album and the track, all artist variables are created."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:214
+msgid "Example 3:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:216
+msgid "Using the album \"`Kermit Unpigged <https://musicbrainz.org/release/860fd92f-6899-4b31-a205-d6b746da734e>`_\" by `The Muppets <https://musicbrainz.org/artist/2ca340a6-e8f2-489d-90c2-f37c5c802d49>`_, the additional artist variables created for track 4, \"`All I Have to Do Is Dream <https://musicbrainz.org/recording/5d98e4d4-be42-4412-94ad-f19562faa416>`_\" by `Linda Ronstadt <https://musicbrainz.org/artist/498f2581-be21-4eef-8756-fbb89d79b1c0>`_ and `Kermit the Frog <https://musicbrainz.org/artist/992a7ea8-96c1-4058-ba96-f811c8d01c77>`_, are:"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:218
+msgid "**_artists_album_primary_id** = 2ca340a6-e8f2-489d-90c2-f37c5c802d49"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:219
+msgid "**_artists_album_primary_std** = The Muppets"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:220
+msgid "**_artists_album_primary_cred** = The Muppets"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:221
+msgid "**_artists_album_primary_sort** = Muppets, The"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:222
+msgid "**_artists_album_all_std** = The Muppets"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:223
+msgid "**_artists_album_all_cred** = The Muppets"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:224
+msgid "**_artists_album_all_sort** = Muppets, The"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:225
+msgid "**_artists_album_all_std_multi** = \\['The Muppets'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:226
+msgid "**_artists_album_all_cred_multi** = \\['The Muppets'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:227
+msgid "**_artists_album_all_legal** = The Muppets"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:229
+msgid "**_artists_album_all_sort_primary** = Muppets, The"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:232
+msgid "**_artists_track_primary_id** = 498f2581-be21-4eef-8756-fbb89d79b1c0"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:233
+msgid "**_artists_track_primary_std** = Linda Ronstadt"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:234
+msgid "**_artists_track_primary_cred** = Linda Ronstadt"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:235
+msgid "**_artists_track_primary_sort** = Ronstadt, Linda"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:236
+msgid "**_artists_track_primary_legal** = Linda Maria Ronstadt"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:237
+msgid "**_artists_track_primary_sort_legal** = Ronstadt, Linda Maria"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:238
+msgid "**_artists_track_additional_id** = \\['992a7ea8-96c1-4058-ba96-f811c8d01c77'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:239
+msgid "**_artists_track_additional_std** = Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:240
+msgid "**_artists_track_additional_cred** = Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:241
+msgid "**_artists_track_additional_sort** = Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:242
+msgid "**_artists_track_additional_legal** = Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:243
+msgid "**_artists_track_additional_std_multi** = \\['Kermit the Frog'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:244
+msgid "**_artists_track_additional_cred_multi** = \\['Kermit the Frog'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:245
+msgid "**_artists_track_additional_sort_multi** = \\['Kermit the Frog'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:246
+msgid "**_artists_album_additional_legal_multi** = \\['n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:247
+msgid "**_artists_track_all_std** = Linda Ronstadt and Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:248
+msgid "**_artists_track_all_cred** = Linda Ronstadt and Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:249
+msgid "**_artists_track_all_sort** = Ronstadt, Linda and Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:250
+msgid "**_artists_track_all_legal** = Linda Maria Ronstadt and Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:251
+msgid "**_artists_track_all_std_multi** = \\['Linda Ronstadt', 'Kermit the Frog'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:252
+msgid "**_artists_track_all_cred_multi** = \\['Linda Ronstadt', 'Kermit the Frog'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:253
+msgid "**_artists_track_all_legal_multi** = \\['Linda Maria Ronstadt', 'n/a'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:254
+msgid "**_artists_track_all_sort_primary** = Ronstadt, Linda and Kermit the Frog"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:255
+msgid "**_artists_track_all_join_phrases** = \\[' and '\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:256
+msgid "**_artists_track_all_types** = \\['Person', 'Character'\\]"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:257
+msgid "**_artists_track_all_count** = 2"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:259
+msgid "Because there is only one artist associated with the album the **_artists_album_additional\\_\\*** and **_artists_album_all_join_phrases** variables are not created."
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:263
+msgid "Source Code"
+msgstr ""
+
+#: ../../additional_artists_variables/user_guide.rst:265
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-additional-artists-variables>`_."
+msgstr ""

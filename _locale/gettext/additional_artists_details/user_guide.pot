@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-02 11:42-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../additional_artists_details/user_guide.rst:2
+msgid "Additional Artists Details"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:7
+msgid "This plugin provides specialized album and track variables with artist details such as type, gender, begin and end dates, location (begin, end and current) and country code (begin, end and current) for use in tagging and naming scripts."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:11
+msgid "This plugin makes additional calls to the MusicBrainz website api for the information, which will slow down retrieving album information from MusicBrainz. This will be particularly noticable when there are many different album or track artists, such as on a \\[Various Artists\\] release. There is an option to disable track artist processing, which can significantly increase the processing speed if you are only interested in album artist details."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:15
+msgid "What it Does"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:17
+msgid "This plugin reads the album and track metadata provided to Picard, extracts the list of associated artists, retrieves the detailed information from the MusicBrainz website, and exposes the information in a number of additional variables for use in Picard scripts."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:20
+msgid "Option Settings"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:22
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track artists and detail included in the artist location variables' content."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:24
+msgid "Additional Artists Details Option Settings"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:31
+msgid "Variables Created"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:33
+msgid "**\\_artist_\\{artist_id\\}_begin** - The begin date (birth date) of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:34
+msgid "**\\_artist_\\{artist_id\\}_begin_country** - The begin two-character country code of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:35
+msgid "**\\_artist_\\{artist_id\\}_begin_location** - The begin location of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:36
+msgid "**\\_artist_\\{artist_id\\}_country** - The two-character country code for the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:37
+msgid "**\\_artist_\\{artist_id\\}_disambiguation** - The disambiguation information for the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:38
+msgid "**\\_artist_\\{artist_id\\}_end** - The end date (death date) of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:39
+msgid "**\\_artist_\\{artist_id\\}_end_country** - The end two-character country code of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:40
+msgid "**\\_artist_\\{artist_id\\}_end_location** - The end location of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:41
+msgid "**\\_artist_\\{artist_id\\}_gender** - The gender of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:42
+msgid "**\\_artist_\\{artist_id\\}_name** - The name of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:43
+msgid "**\\_artist_\\{artist_id\\}_sort_name** - The sort name of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:44
+msgid "**\\_artist_\\{artist_id\\}_type** - The type of artist (person, group, etc.)"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:48
+msgid "A variable will only be created if the information is returned from MusicBrainz. For example, if a gender has not been specified in the MusicBrainz data then the **%\\_artist_\\{artist_id\\}_gender%** variable will not be created."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:52
+msgid "Examples"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:54
+msgid "If you load the release **Wrecking Ball** (release `8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_) by Sarah Blackwood (artist `af7e5ea9-bd58-4346-8f78-d672e9f297f7 <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_), Jenni Pleau (artist `07fa21a9-c253-4ed0-b711-d63f7965b723 <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_) & Emily Bones (artist `541d331c-f041-4895-b8f2-7db9e27dc5ab <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_), the following variables will be created:"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:56
+msgid "Sarah Blackwood (primary artist):"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:58
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin** = \"1980-10-18\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:59
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_country** = \"CA\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:60
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_location** = \"Burlington, Ontario, Canada\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:61
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_country** = \"CA\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:62
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_disambiguation** = \"rockabilly, + \"Somebody That I Used to Know\"\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:63
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_gender** = \"Female\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:64
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_location** = \"Canada\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:65
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_name** = \"Sarah Blackwood\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:66
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_sort_name** = \"Blackwood, Sarah\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:67
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_type** = \"Person\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:69
+msgid "Jenny Pleau (additional artist)"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:71
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_country** = \"CA\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:72
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_gender** = \"Female\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:73
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_location** = \"Kitchener, Ontario, Canada\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:74
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_name** = \"Jenni Pleau\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:75
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_sort_name** = \"Pleau, Jenni\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:76
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_type** = \"Person\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:78
+msgid "Emily Bones (additional artist)"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:80
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_gender** = \"Female\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:81
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_name** = \"Emily Bones\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:82
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_sort_name** = \"Bones, Emily\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:83
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_type** = \"Person\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:85
+msgid "Note that variables will only be created for information that exists for the artist's record."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:87
+msgid "This could be used to set a **%country%** tag to the country code of the (primary) album artist with a tagging script like:"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:95
+msgid "Source Code"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:97
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-additional-artists-details>`_."
+msgstr ""
