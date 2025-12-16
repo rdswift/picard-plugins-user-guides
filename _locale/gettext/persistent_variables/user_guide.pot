@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 11:42-0700\n"
+"POT-Creation-Date: 2025-12-16 13:43-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "There are two types of persistent variables maintained - album variables 
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:13
-msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the `%performer:*%` tags."
+msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:17
@@ -65,7 +65,7 @@ msgid "**$set_a(name,value)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:35
-msgid "Sets the album persistent variable `name` to `value`."
+msgid "Sets the album persistent variable **name** to **value**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:37
@@ -73,7 +73,7 @@ msgid "**$unset_a(name)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:39
-msgid "Unsets the album persistent variable `name`."
+msgid "Unsets the album persistent variable **name**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:41
@@ -81,7 +81,7 @@ msgid "**$get_a(name)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:43
-msgid "Gets the album persistent variable `name`."
+msgid "Gets the album persistent variable **name**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:45
@@ -97,7 +97,7 @@ msgid "**$set_s(name,value)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:51
-msgid "Sets the session persistent variable `name` to `value`."
+msgid "Sets the session persistent variable **name** to **value**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:53
@@ -105,7 +105,7 @@ msgid "**$unset_s(name)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:55
-msgid "Unsets the session persistent variable `name`."
+msgid "Unsets the session persistent variable **name**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:57
@@ -113,7 +113,7 @@ msgid "**$get_s(name)**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:59
-msgid "Gets the session persistent variable `name`."
+msgid "Gets the session persistent variable **name**."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:61
@@ -151,7 +151,7 @@ msgid "Now to make the times available as tags for all tracks, you need to creat
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:149
-msgid "The disc and release playing times will now be stored in each of the track files under the tag names `Disc Playing Time` and `Release Playing Time`. These tags are also available for use in the file naming script."
+msgid "The disc and release playing times will now be stored in each of the track files under the tag names \"**Disc Playing Time**\" and \"**Release Playing Time**\". These tags are also available for use in the file naming script."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:152
@@ -163,7 +163,7 @@ msgid "Find the earliest recording date of any of the tracks on the album, so th
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:163
-msgid "The date for the album is now available in the file naming script using `$get_a(earliest_date)`."
+msgid "The date for the album is now available in the file naming script using ``$get_a(earliest_date)``."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:166
@@ -183,7 +183,7 @@ msgid "The next step is to create a new tagging script in the `Scripting Options
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:179
-msgid "This script retrieves the value of the `%genre%` tag from the first track on the first CD and stores it in a special album-level variable called `_common_genre`. It then stores it in the `%genre%` tag for each of the tracks in the album. If there was no genre found for the first track of the first disc, the `%genre%` tag will be set to \"None\". If you would like a different default genre value to be used, simply replace \"None\" in the second script with your preferred default."
+msgid "This script retrieves the value of the **%genre%** tag from the first track on the first CD and stores it in a special album-level variable called \"**_common_genre**\". It then stores it in the **%genre%** tag for each of the tracks in the album. If there was no genre found for the first track of the first disc, the **%genre%** tag will be set to \"None\". If you would like a different default genre value to be used, simply replace \"None\" in the second script with your preferred default."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:182
@@ -199,7 +199,7 @@ msgid "Now to make the combined list available as a tag for all tracks, you need
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:198
-msgid "The complete track list will now be stored in each of the track files under the tag name `all_tracks`."
+msgid "The complete track list will now be stored in each of the track files under the tag name \"**all_tracks**\"."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:201
@@ -215,7 +215,7 @@ msgid "The first step is to create a new tagging script in the `Scripting Option
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:217
-msgid "This script first stores the original values of the `%tracknumber%` and `%totaltracks%` tags and saves them in backup variables for later use. It then checks if the `%title%` tag from the first track on the CD contains \"\\[data\" (matching \\[data\\] or \\[data track\\]). If it matches, then \"1\" is stored in a special album-level variable called `_track_adjust`. It then adjusts (reduces) the `%tracknumber%` and `%totaltracks%` values by one for each of the tracks in the album if the `_track_adjust` variable is set."
+msgid "This script first stores the original values of the **%tracknumber%** and **%totaltracks%** tags and saves them in backup variables for later use. It then checks if the **%title%** tag from the first track on the CD contains \"\\[data\" (matching \\[data\\] or \\[data track\\]). If it matches, then \"1\" is stored in a special album-level variable called \"**_track_adjust**\". It then adjusts (reduces) the **%tracknumber%** and **%totaltracks%** values by one for each of the tracks in the album if the \"**_track_adjust**\" variable is set."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:220
@@ -235,7 +235,7 @@ msgid "This can be done by creating a new tagging script in the `Scripting Optio
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:242
-msgid "This script first stores the original title of track 0 with a separating slash in a persistent `_zero_track_title` variable. It also stores a new (reduced) total track count in a persistent `_new_track_count` variable if there is a track number 0. It then updates the title of track 1 to include the `_zero_track_title` variable, first checking to ensure that it hasn't already been updated, and updates the value `%totaltracks%` tag for all track numbers greater than 0 if the variable `_new_track_count` has been set."
+msgid "This script first stores the original title of track 0 with a separating slash in a persistent \"**_zero_track_title**\" variable. It also stores a new (reduced) total track count in a persistent \"**_new_track_count**\" variable if there is a track number 0. It then updates the title of track 1 to include the \"**_zero_track_title**\" variable, first checking to ensure that it hasn't already been updated, and updates the value **%totaltracks%** tag for all track numbers greater than 0 if the variable \"**_new_track_count**\" has been set."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:245
@@ -243,7 +243,7 @@ msgid "Example 7"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:247
-msgid "When a release is a vinyl with the tracks on each side listed with the side as part of the `_musicbrainz_tracknumber` variable (such as A1, A2, B1, etc.), you might want to include the number of tracks on the side as part of the number (such as A1/3, A2/3, B1/6, etc. where side A contains 3 tracks and side B contains 6 tracks). To do this, you need to have 2 separate tagging scripts -- one to collect the track-per-side count, and the other to apply the value."
+msgid "When a release is a vinyl with the tracks on each side listed with the side as part of the \"**_musicbrainz_tracknumber**\" variable (such as A1, A2, B1, etc.), you might want to include the number of tracks on the side as part of the number (such as A1/3, A2/3, B1/6, etc. where side A contains 3 tracks and side B contains 6 tracks). To do this, you need to have 2 separate tagging scripts -- one to collect the track-per-side count, and the other to apply the value."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:249
@@ -255,7 +255,7 @@ msgid "**Script 2 - Apply the information**"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:281
-msgid "This will store the updated vinyl track numbers (such as A1/3, A2/3, B1/6, etc.) to the `tracknumber` tag. Note that some file formats (such as MP4) do not allow any non-digit (0-9) characters in the `tracknumber` tag."
+msgid "This will store the updated vinyl track numbers (such as A1/3, A2/3, B1/6, etc.) to the \"**tracknumber**\" tag. Note that some file formats (such as MP4) do not allow any non-digit (0-9) characters in the \"**tracknumber**\" tag."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:285

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 11:42-0700\n"
+"POT-Creation-Date: 2025-12-16 13:43-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,5 +33,5 @@ msgid "Problems with the documentation or suggestions for improvements can be re
 msgstr ""
 
 #: ../../general/introduction.rst:14
-msgid "If you find a plugin useful, please consider making a donation to the `MetaBrainz Foundation <https://metabrainz.org/donate>`_ to support the continued development of MusicBrainz Picard and related projects."
+msgid "If you find a plugin useful, please consider making a `donation <https://metabrainz.org/donate>`_ to the MetaBrainz Foundation to support the continued development of MusicBrainz Picard and related projects."
 msgstr ""

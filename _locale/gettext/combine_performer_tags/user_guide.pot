@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.02\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 11:45-0700\n"
+"POT-Creation-Date: 2025-12-16 13:43-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,11 @@ msgid "Overview"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:7
-msgid "This plugin combines all instrument and vocal performer tags into a new multi-value variable `%_performers%` for each track. It requires that the \"**Use track relationships**\" setting is enabled in **Options** -> **Metadata**. Depending on the \"Grouping\" setting, each item in the variable is either the performer's name followed by the instruments and vocals they performed (e.g. \"*Jackson Browne: acoustic guitar, piano, lead vocals*\") or the instrument or vocal name followed by the artists associated with that instrument or vocal (e.g. \"*acoustic guitar: Jackson Browne, Clarence White (additional)*\")."
+msgid "This plugin combines all instrument and vocal performer tags into a new multi-value variable ``%_performers%`` for each track. It requires that the \"**Use track relationships**\" setting is enabled in **Options** -> **Metadata**. Depending on the \"Grouping\" setting, each item in the variable is either the performer's name followed by the instruments and vocals they performed (e.g. \"*Jackson Browne: acoustic guitar, piano, lead vocals*\") or the instrument or vocal name followed by the artists associated with that instrument or vocal (e.g. \"*acoustic guitar: Jackson Browne, Clarence White (additional)*\")."
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:11
-msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the `%performer:*%` tags."
+msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags."
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:15
@@ -45,7 +45,7 @@ msgid "Option Settings"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:23
-msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in `%_performers%` variable."
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in ``%_performers%`` variable."
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:25
@@ -64,109 +64,109 @@ msgstr ""
 msgid "Standard or Credited Information Settings"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:42
+#: ../../combine_performer_tags/user_guide.rst:43
 msgid "These options determine whether the information is displayed as **credited** or **standard**. This applies to Artists, Instruments and Vocals, and the display format for each can be set separately. If credited is selected for one of the information types and there is no credited value available, the standard information will be used."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:45
+#: ../../combine_performer_tags/user_guide.rst:46
 msgid "Include Performance Attributes"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:47
+#: ../../combine_performer_tags/user_guide.rst:48
 msgid "Include Performance Attributes Settings"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:51
+#: ../../combine_performer_tags/user_guide.rst:53
 msgid "This option determines whether or not performance attributes are included in the output (if they have been specified in the performance relationship). The display of each of the attributes -- additional, guest, solo and vocal types -- can be enabled or disabled separately for instruments and vocals."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:54
+#: ../../combine_performer_tags/user_guide.rst:56
 msgid "Grouping"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:56
+#: ../../combine_performer_tags/user_guide.rst:58
 msgid "Grouping Settings"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:60
+#: ../../combine_performer_tags/user_guide.rst:63
 msgid "This option determines how the performance items are grouped -- either by artist or instrument/vocal."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:62
+#: ../../combine_performer_tags/user_guide.rst:65
 msgid "If grouped by artist, each artist will be listed in a separate item along with all of the instruments and vocals associated with the artist. The artists will be sorted in alphabetical order by the artist's sort name, with artists having an associated instrument appearing before an artist with a vocal credit only. The instruments/vocals will be sorted in alphabetical order with all instruments appearing before any vocals."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:64
+#: ../../combine_performer_tags/user_guide.rst:67
 msgid "If grouped by instrument/vocal, each instrument or vocal will be listed in a separate item along with all of the artists associated with the instrument or vocal. The instruments/vocals will be sorted in alphabetical order with all instruments appearing before any vocals. The artists will be sorted in alphabetical order by the artist's sort name."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:67
-#: ../../combine_performer_tags/user_guide.rst:69
+#: ../../combine_performer_tags/user_guide.rst:70
+#: ../../combine_performer_tags/user_guide.rst:72
 msgid "Keyword Sections Assignment"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:73
+#: ../../combine_performer_tags/user_guide.rst:77
 msgid "These settings determine the format for the items in the variable. The format is divided into six parts: the artist; the instrument or vocal; and four user selectable sections for the extra information. This is set out as:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:75
+#: ../../combine_performer_tags/user_guide.rst:79
 msgid "With Artist grouping:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:77
+#: ../../combine_performer_tags/user_guide.rst:81
 msgid "Artist: [Section 1]Instrument/Vocal[Section 2][Section 3][Section 4]"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:79
+#: ../../combine_performer_tags/user_guide.rst:83
 msgid "With Instrument/Vocal grouping:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:81
+#: ../../combine_performer_tags/user_guide.rst:85
 msgid "[Section 1]Instrument/Vocal[Section 2][Section 3]: Artist[Section 4]"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:83
+#: ../../combine_performer_tags/user_guide.rst:87
 msgid "You can select the section in which each of the extra information words appear."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:86
-#: ../../combine_performer_tags/user_guide.rst:88
+#: ../../combine_performer_tags/user_guide.rst:90
+#: ../../combine_performer_tags/user_guide.rst:92
 msgid "Section Display Settings"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:92
+#: ../../combine_performer_tags/user_guide.rst:97
 msgid "For each of the sections you can select the starting character(s), the character(s) separating entries, and the ending character(s). Note that leading or trailing spaces must be included in the settings and will not be automatically added. If no separator characters are entered, the items within a section will be automatically separated by a single space."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:95
-#: ../../combine_performer_tags/user_guide.rst:97
+#: ../../combine_performer_tags/user_guide.rst:100
+#: ../../combine_performer_tags/user_guide.rst:102
 msgid "Example Output"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:101
+#: ../../combine_performer_tags/user_guide.rst:107
 msgid "The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:105
+#: ../../combine_performer_tags/user_guide.rst:111
 msgid "Examples"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:107
+#: ../../combine_performer_tags/user_guide.rst:113
 msgid "You can use the following tagger script to include this in the tags written to the files:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:114
+#: ../../combine_performer_tags/user_guide.rst:120
 msgid "or:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:121
-msgid "If you have included this as a combined tag, you might also want to remove the individual `%performer:*%` tags, which can be accomplished by the tagger script:"
+#: ../../combine_performer_tags/user_guide.rst:127
+msgid "If you have included this as a combined tag, you might also want to remove the individual ``%performer:*%`` tags, which can be accomplished by the tagger script:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:128
+#: ../../combine_performer_tags/user_guide.rst:134
 msgid "Source Code"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:130
+#: ../../combine_performer_tags/user_guide.rst:136
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-combine-performer-tags>`_."
 msgstr ""

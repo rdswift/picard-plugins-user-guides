@@ -18,7 +18,7 @@ This plugin provides specialized album and track variables for use in naming scr
 What it Does
 ----------------
 
-This plugin reads the album and track metadata provided to Picard and exposes the information in a number of additional variables for use in Picard scripts. The plugin has been designed such that the information is presented consistently regardless of whether or not the `Use standardized artist names` option is selected. This means that some of the information available through the standard Picard tags will be duplicated in the variables provided by this plugin.
+This plugin reads the album and track metadata provided to Picard and exposes the information in a number of additional variables for use in Picard scripts. The plugin has been designed such that the information is presented consistently regardless of whether or not the ``Use standardized artist names`` option is selected. This means that some of the information available through the standard Picard tags will be duplicated in the variables provided by this plugin.
 
 
 Option Settings

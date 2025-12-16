@@ -11,4 +11,4 @@ Problems with the documentation or suggestions for improvements can be reported 
 
 .. Translations of this documentation into other languages are very welcome. If you would like to contribute a translation, please visit our `Weblate server <https://weblate.rsds.ca>`_.
 
-If you find a plugin useful, please consider making a donation to the `MetaBrainz Foundation <https://metabrainz.org/donate>`_ to support the continued development of MusicBrainz Picard and related projects.
+If you find a plugin useful, please consider making a `donation <https://metabrainz.org/donate>`_ to the MetaBrainz Foundation to support the continued development of MusicBrainz Picard and related projects.
