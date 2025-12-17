@@ -1,0 +1,116 @@
+Genre Mapper
+==============
+
+Overview
+---------
+
+This plugin provides the ability to standardize genres in the "genre" tag by matching the genres as found to a standard genre as defined in the genre replacement mapping configuration option. Once installed a settings page will be added to Picard's options, which is where the plugin is configured.
+
+
+What it Does
+----------------
+
+This plugin reads the track metadata provided to Picard, extracts the list of associated instrument and vocal performers, and combines the information in a multi-value variable for use in Picard scripts.
+
+
+Option Settings
+----------------
+
+The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to remapping the genres by providing a list of the original/replacement pairs used to modify the genres provided in the "genre" tag. Each pair must be entered on a separate line in the form:
+
+.. code-block:: none
+
+   [genre match test string]=[replacement genre]
+
+Unless the "Match tests are entered as regular expressions" option is enabled, supported wildcards in the test string part of the mapping include '*' and '?' to match any number of characters and a single character respectively. If the "Match tests are entered as regular expressions" option is enabled, then the match test string portion of **every** pair must be entered as a regular expression. Leading and trailing spaces will be removed from all match test strings and replacement strings before processing.
+
+Blank lines and lines beginning with an equals sign (=) will be ignored. If the replacement part of the pair is blank, any matching genres will be removed. Case-insensitive tests are used when matching. Replacements will be made in the order they are found in the list.
+
+There is also a setting which allows the user to choose whether or not to apply the first matching pair only, or continue processing the remaining pairs with the updated genre. By default, all of the pairs are processed.
+
+
+Examples
+---------
+
+**Example 1**
+
+Suppose that you want to combine all the different types of rock genres (e.g. Country Rock, Hard Rock, Progressive Rock, Punk Rock, Rock 'n' Roll) into a single "Rock" entry. This could be done using the following matching pairs configuration:
+
+.. code-block:: none
+
+   = Combine all "Rock" genres
+   *rock*=Rock
+
+
+**Example 2**
+
+Similar to Example 1, except that you want to keep "Punk Rock" separate from "Rock". This could be done by enabling the "Apply only the first matching replacement" option and using the following matching pairs configuration:
+
+.. code-block:: none
+
+   = Keep "Punk Rock"
+   punk rock=Punk Rock
+
+   = Combine all "Rock" genres
+   *rock*=Rock
+
+This would cause a genre of "Punk Rock" to match the first test, keep the genre as "Punk Rock" and stop processing that genre entry. If the "Apply only the first matching replacement" option was not enabled, processing would continue and the next match would change the genre to "Rock".
+
+
+**Example 3**
+
+Similar to Example 2, except that you want to keep processing rather than stop on the first match. This could be done by disabling the "Apply only the first matching replacement" option and using the following matching pairs configuration:
+
+.. code-block:: none
+
+   = Keep "Punk Rock" as temporary "Temp1" tag so
+   = that it doesn't match any following lines
+   punk rock=Temp1
+
+   = Combine all "Rock" genres
+   *rock*=Rock
+
+   ===========================================
+   = Additional processing pairs as required =
+   ===========================================
+
+   = Change the "Temp1" tag back to "Punk Rock"
+   temp1=Punk Rock
+
+This would cause a genre of "Punk Rock" to match the first test, changing the genre to "Temp1" (not matched in any of the following processing pairs) and continue processing. The final processing pair matches the "Temp1" genre set earlier and changes the genre back to "Punk Rock".
+
+
+**Example 4**
+
+Perhaps you want to remove all "Pop" genres, including genres where "Pop" is part of a hyphenated word (e.g. K-Pop) but not where "pop" is part of another word (e.g. Popular). This could be done by using the following matching pairs configuration:
+
+.. code-block:: none
+
+   = Remove all "Pop" genres
+   = Done in 6 entries to only match "Pop"
+   = as a separate word or as part of a
+   = hyphenated word such as "K-Pop"
+   pop=
+   pop *=
+   * pop=
+   * pop *=
+   *-pop=
+   *-pop *=
+
+
+**Example 5**
+
+Similar to Example 4, except that the "Match tests are entered as regular expressions" option is enabled, allowing the matching pairs configuration to be simplified to a single line as:
+
+.. code-block:: none
+
+   = Remove all "Pop" genres
+   = Only match "Pop" as a separate word or as
+   = part of a hyphenated word such as "K-Pop"
+   ^.*-?pop(\s.*)?$=
+
+
+Source Code
+----------------
+
+The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-genre-mapper>`_.

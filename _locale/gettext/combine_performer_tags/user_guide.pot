@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.16\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.17\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16 13:43-0700\n"
+"POT-Creation-Date: 2025-12-17 16:41-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,60 +113,52 @@ msgstr ""
 msgid "With Artist grouping:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:81
-msgid "Artist: [Section 1]Instrument/Vocal[Section 2][Section 3][Section 4]"
-msgstr ""
-
-#: ../../combine_performer_tags/user_guide.rst:83
+#: ../../combine_performer_tags/user_guide.rst:85
 msgid "With Instrument/Vocal grouping:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:85
-msgid "[Section 1]Instrument/Vocal[Section 2][Section 3]: Artist[Section 4]"
-msgstr ""
-
-#: ../../combine_performer_tags/user_guide.rst:87
+#: ../../combine_performer_tags/user_guide.rst:91
 msgid "You can select the section in which each of the extra information words appear."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:90
-#: ../../combine_performer_tags/user_guide.rst:92
+#: ../../combine_performer_tags/user_guide.rst:94
+#: ../../combine_performer_tags/user_guide.rst:96
 msgid "Section Display Settings"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:97
+#: ../../combine_performer_tags/user_guide.rst:101
 msgid "For each of the sections you can select the starting character(s), the character(s) separating entries, and the ending character(s). Note that leading or trailing spaces must be included in the settings and will not be automatically added. If no separator characters are entered, the items within a section will be automatically separated by a single space."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:100
-#: ../../combine_performer_tags/user_guide.rst:102
+#: ../../combine_performer_tags/user_guide.rst:104
+#: ../../combine_performer_tags/user_guide.rst:106
 msgid "Example Output"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:107
+#: ../../combine_performer_tags/user_guide.rst:111
 msgid "The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified."
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:111
+#: ../../combine_performer_tags/user_guide.rst:115
 msgid "Examples"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:113
+#: ../../combine_performer_tags/user_guide.rst:117
 msgid "You can use the following tagger script to include this in the tags written to the files:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:120
+#: ../../combine_performer_tags/user_guide.rst:124
 msgid "or:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:127
+#: ../../combine_performer_tags/user_guide.rst:131
 msgid "If you have included this as a combined tag, you might also want to remove the individual ``%performer:*%`` tags, which can be accomplished by the tagger script:"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:134
+#: ../../combine_performer_tags/user_guide.rst:138
 msgid "Source Code"
 msgstr ""
 
-#: ../../combine_performer_tags/user_guide.rst:136
+#: ../../combine_performer_tags/user_guide.rst:140
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-combine-performer-tags>`_."
 msgstr ""

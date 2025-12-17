@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.16\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.17\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16 13:43-0700\n"
+"POT-Creation-Date: 2025-12-17 16:41-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "This plugin allows the user to configure the way that instrument and voca
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:11
-msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the `%performer:*%` tags."
+msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:15
@@ -49,189 +49,189 @@ msgid "Picard will by default try to order the performer/instrument credits by t
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:23
-msgid "So instead of this::"
+msgid "So instead of this:"
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:32
-msgid "It will be displayed like this::"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:44
-msgid "**Second:**"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:46
-msgid "This plugin allows fine-tuned organization of how instruments, performers and additional descriptions (keywords) are displayed in the instrument/performer tags."
+#: ../../format_performer_tags/user_guide.rst:34
+msgid "It will be displayed like this:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:48
-msgid "Here is some background information about these keywords:"
+msgid "**Second:**"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:50
-msgid "MusicBrainz' database allows to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store, and offer Picard:"
+msgid "This plugin allows fine-tuned organization of how instruments, performers and additional descriptions (keywords) are displayed in the instrument/performer tags."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:52
-msgid "additional"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:53
-msgid "guest"
+msgid "Here is some background information about these keywords:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:54
-msgid "solo"
+msgid "MusicBrainz' database allows to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store, and offer Picard:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:56
-msgid "For an artist performing with his/her voice, MusicBrainz has this restricted list of keywords describing the role or the register of the voice:"
+msgid "additional"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:57
+msgid "guest"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:58
-msgid "background vocals"
+msgid "solo"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:60
-msgid "choir vocals"
+msgid "For an artist performing with his/her voice, MusicBrainz has this restricted list of keywords describing the role or the register of the voice:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:62
-msgid "lead vocals"
+msgid "background vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:64
-msgid "alto vocals"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:65
-msgid "baritone vocals"
+msgid "choir vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:66
-msgid "bass vocals"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:67
-msgid "bass-baritone vocals"
+msgid "lead vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:68
-msgid "contralto vocals"
+msgid "alto vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:69
-msgid "countertenor vocals"
+msgid "baritone vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:70
-msgid "mezzo-soprano vocals"
+msgid "bass vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:71
-msgid "soprano vocals"
+msgid "bass-baritone vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:72
-msgid "tenor vocals"
+msgid "contralto vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:73
-msgid "treble vocals"
+msgid "countertenor vocals"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:74
+msgid "mezzo-soprano vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:75
-msgid "other vocals"
+msgid "soprano vocals"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:76
+msgid "tenor vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:77
-msgid "spoken vocals"
+msgid "treble vocals"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:79
-msgid "Picard can retrieve and display these keywords and will list them all together in front of the performer. The result will be something like this::"
+msgid "other vocals"
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:86
+#: ../../format_performer_tags/user_guide.rst:81
+msgid "spoken vocals"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:83
+msgid "Picard can retrieve and display these keywords and will list them all together in front of the performer. The result will be something like this:"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:92
 msgid "The problem with this is that it is a bit indistinct if these keywords say something about the instrument, the artist and their performing role, the voice's register, or the persons relation to the group/orchestra. For instance:"
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:88
+#: ../../format_performer_tags/user_guide.rst:94
 msgid "'additional' is referring to instrumentation. For example 'additional percussion'."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:89
+#: ../../format_performer_tags/user_guide.rst:95
 msgid "'guest' is referring to the performer as a person. Indicating that they are a guest in that band/orchestra instead of a regular member."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:90
+#: ../../format_performer_tags/user_guide.rst:96
 msgid "'solo' is referring to a specific role a musician performs in a composition. For example a musician performing a guitar solo."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:91
+#: ../../format_performer_tags/user_guide.rst:97
 msgid "'soprano vocals' is saying something about the register of a performer's voice."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:93
-msgid "So you might want to attach 'solo' to the instrument, 'baritone' to the vocals, and 'guest' to the performer. This plugin allows you to do that, so you could have something like this as a result::"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:102
-msgid "Option Settings"
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:104
-msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to formatting the instrument and vocal performer tags."
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:106
-msgid "The basic structure of a performer tag such as Picard produces it is::"
+#: ../../format_performer_tags/user_guide.rst:99
+msgid "So you might want to attach 'solo' to the instrument, 'baritone' to the vocals, and 'guest' to the performer. This plugin allows you to do that, so you could have something like this as a result:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:110
-msgid "This plugin makes four different 'Sections' at fixed positions in these tags available. Their positions are::"
+msgid "Option Settings"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:112
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to formatting the instrument and vocal performer tags."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:114
-msgid "In the settings panel you can define in what section (at what location) you want each of the available keywords to be displayed. You can do that by simply selecting the section number for that (group of) keyword(s)."
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:116
-msgid "You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parenthesis brackets (), or maybe you prefer less common brackets such as [] or \\<\\>. Note that using default parenthesis might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc."
+msgid "The basic structure of a performer tag such as Picard produces it is:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:120
-msgid "The plugin does not add any spaces as separators by default, so you will need to define those to your personal liking."
+msgid "This plugin makes four different 'Sections' at fixed positions in these tags available. Their positions are:"
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:122
-msgid "Format Performer Tags Option Settings"
+#: ../../format_performer_tags/user_guide.rst:126
+msgid "In the settings panel you can define in what section (at what location) you want each of the available keywords to be displayed. You can do that by simply selecting the section number for that (group of) keyword(s)."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:128
-msgid "The first group of settings is the **Keyword Section Assignments**. This is where you select the section in which each of the keywords will be displayed. Selection is made by clicking the radio button corresponding to the desired section for each of the keywords."
+msgid "You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parenthesis brackets (), or maybe you prefer less common brackets such as [] or \\<\\>. Note that using default parenthesis might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:130
-msgid "The second group of settings is the **Section Display Settings**. This is where you configure the text included at the beginning and end of each section displayed, and the characters used to separate multiple items within a section. Note that leading or trailing spaces must be included in the settings and will not be automatically added. If no separator characters are entered, the items will be automatically separated by a single space."
+#: ../../format_performer_tags/user_guide.rst:132
+msgid "The plugin does not add any spaces as separators by default, so you will need to define those to your personal liking."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:134
-msgid "There is an example section at the bottom of the settings page to show how the information will be displayed. This example is updated each time a setting is modified."
-msgstr ""
-
-#: ../../format_performer_tags/user_guide.rst:138
-msgid "Examples"
+msgid "Format Performer Tags Option Settings"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:140
-msgid "The initial default settings as shown above will produce tags such as::"
+msgid "The first group of settings is the **Keyword Section Assignments**. This is where you select the section in which each of the keywords will be displayed. Selection is made by clicking the radio button corresponding to the desired section for each of the keywords."
 msgstr ""
 
-#: ../../format_performer_tags/user_guide.rst:148
-msgid "Source Code"
+#: ../../format_performer_tags/user_guide.rst:142
+msgid "The second group of settings is the **Section Display Settings**. This is where you configure the text included at the beginning and end of each section displayed, and the characters used to separate multiple items within a section. Note that leading or trailing spaces must be included in the settings and will not be automatically added. If no separator characters are entered, the items will be automatically separated by a single space."
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:146
+msgid "There is an example section at the bottom of the settings page to show how the information will be displayed. This example is updated each time a setting is modified."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:150
+msgid "Examples"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:152
+msgid "The initial default settings as shown above will produce tags such as:"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:162
+msgid "Source Code"
+msgstr ""
+
+#: ../../format_performer_tags/user_guide.rst:164
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-format-performer-tags>`_."
 msgstr ""

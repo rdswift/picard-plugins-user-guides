@@ -8,7 +8,7 @@ This plugin allows the user to configure the way that instrument and vocal perfo
 
 .. note::
 
-   The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the `%performer:*%` tags.
+   The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags.
 
 
 What it Does
@@ -20,7 +20,9 @@ This plugin serves two purposes.
 
 Picard will by default try to order the performer/instrument credits by the name of the performers, summing up all instruments for that performer in one line. This plugin will order the performer/instrument credits by instrument, summing up all performers that play them.
 
-So instead of this::
+So instead of this:
+
+.. code-block:: none
 
    background vocals and drums: Wayne Gretzky
    bass and background vocals: Leslie Nielsen
@@ -29,7 +31,9 @@ So instead of this::
    keyboard and lead vocals: Bianca Castafiore
 
 
-It will be displayed like this::
+It will be displayed like this:
+
+.. code-block:: none
 
    background vocals: Wayne Gretzky, Leslie Nielsen
    bass: Leslie Nielsen
@@ -76,7 +80,9 @@ For an artist performing with his/her voice, MusicBrainz has this restricted lis
 
   * spoken vocals
 
-Picard can retrieve and display these keywords and will list them all together in front of the performer. The result will be something like this::
+Picard can retrieve and display these keywords and will list them all together in front of the performer. The result will be something like this:
+
+.. code-block:: none
 
    guitar and solo guitar: Bob 'Swift' Fingers
    additional drums: Rob Reiner (guest)
@@ -90,7 +96,9 @@ The problem with this is that it is a bit indistinct if these keywords say somet
 * 'solo' is referring to a specific role a musician performs in a composition. For example a musician performing a guitar solo.
 * 'soprano vocals' is saying something about the register of a performer's voice.
 
-So you might want to attach 'solo' to the instrument, 'baritone' to the vocals, and 'guest' to the performer. This plugin allows you to do that, so you could have something like this as a result::
+So you might want to attach 'solo' to the instrument, 'baritone' to the vocals, and 'guest' to the performer. This plugin allows you to do that, so you could have something like this as a result:
+
+.. code-block:: none
 
    guitar [solo]: Bob 'Swift' Fingers
    drums <additional> : Rob Reiner (guest)
@@ -103,13 +111,17 @@ Option Settings
 
 The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to formatting the instrument and vocal performer tags.
 
-The basic structure of a performer tag such as Picard produces it is::
+The basic structure of a performer tag such as Picard produces it is:
 
-    [Keywords] Instrument / Vocals: Performer
+.. code-block:: none
 
-This plugin makes four different 'Sections' at fixed positions in these tags available. Their positions are::
+   [Keywords] Instrument / Vocals: Performer
 
-    [Section 1]Instrument / Vocals[Section 2][Section 3]: Performer[Section 4]
+This plugin makes four different 'Sections' at fixed positions in these tags available. Their positions are:
+
+.. code-block:: none
+
+   [Section 1]Instrument / Vocals[Section 2][Section 3]: Performer[Section 4]
 
 In the settings panel you can define in what section (at what location) you want each of the available keywords to be displayed. You can do that by simply selecting the section number for that (group of) keyword(s).
 
@@ -137,7 +149,9 @@ The second group of settings is the **Section Display Settings**. This is where 
 Examples
 ---------
 
-The initial default settings as shown above will produce tags such as::
+The initial default settings as shown above will produce tags such as:
+
+.. code-block:: none
 
    rhodes piano (solo): Billy Preston (guest)
    percussion: Steve Berlin (guest), Kris MacFarlane, Séan McCann

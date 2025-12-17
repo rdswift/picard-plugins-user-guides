@@ -78,9 +78,13 @@ Keyword Sections Assignment
 
 With Artist grouping:
 
+.. code-block:: none
+
    Artist: [Section 1]Instrument/Vocal[Section 2][Section 3][Section 4]
 
 With Instrument/Vocal grouping:
+
+.. code-block:: none
 
    [Section 1]Instrument/Vocal[Section 2][Section 3]: Artist[Section 4]
 
