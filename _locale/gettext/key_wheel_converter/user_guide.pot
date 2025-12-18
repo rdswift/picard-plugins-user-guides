@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-18 13:01-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../key_wheel_converter/user_guide.rst:2
+msgid "Key Wheel Converter"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:7
+msgid "This plugin provides the ability to convert key information between 'camelot', 'open key', 'standard' and 'traktor' formats."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:13
+msgid "It adds four new scripting functions:"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:15
+msgid "**$key2camelot(key)** returns the key string ``key`` in camelot key format."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:16
+msgid "**$key2openkey(key)** returns the key string ``key`` in open key format."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:17
+msgid "**$key2standard(key[,symbols])** returns the key string ``key`` in standard key format.  If the optional argument ``symbols`` is set, then the '♭' and '#' symbols will be used, rather than spelling out '-Flat' and '-Sharp'."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:18
+msgid "**$key2traktor(key)** returns the key string ``key`` in traktor key format."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:20
+msgid "The ``key`` argument can be entered in any of the supported formats, such as '2B' (camelot), '6d' (open key), 'A♭ Minor' (standard with symbols), 'A-Flat Minor' (standard with text) or 'C#' (traktor).  If the ``key`` argument is not recognized as one of the standard keys in the supported formats, then an empty string will be returned."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:24
+msgid "Option Settings"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:26
+msgid "There are no option settings for this plugin."
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:30
+msgid "Examples"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:32
+msgid "The following tables shows the outputs of the various functions for different key inputs:"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:52
+msgid "Source Code"
+msgstr ""
+
+#: ../../key_wheel_converter/user_guide.rst:54
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-key-wheel-converter>`_."
+msgstr ""
