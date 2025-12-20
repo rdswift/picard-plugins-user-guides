@@ -19,7 +19,7 @@ The function is used as ``$logline(text[,level])``, where ``text`` is the text t
 - I (Info)
 - D (Debug)
 
-If an unknown level is entered, the function will use the default `Info` level.
+If an unknown level is entered, the function will use the default ``Info`` level.
 
 
 Option Settings
