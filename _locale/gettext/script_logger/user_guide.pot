@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.20\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-20 13:21-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../script_logger/user_guide.rst:2
+msgid "Script Logger"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:7
+msgid "This plugin provides the ability to write entries to Picard's system log from both user scripts and file naming scripts."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:13
+msgid "This plugin provides a new script function ``$logline()`` to write entries to Picard's system log. By default, the log level is set at ``Info``, but any level can be used by providing the level as an optional second parameter to the function. The function is available to both user scripts and file naming scripts."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:15
+msgid "The function is used as ``$logline(text[,level])``, where ``text`` is the text to write to the log. The entry will be written at log level ``Info`` by default, but this can be changed by specifying a different level as an optional second parameter. Allowable log levels are:"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:17
+msgid "E (Error)"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:18
+msgid "W (Warning)"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:19
+msgid "I (Info)"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:20
+msgid "D (Debug)"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:22
+msgid "If an unknown level is entered, the function will use the default `Info` level."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:26
+msgid "Option Settings"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:28
+msgid "There are no option settings for this plugin."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:32
+msgid "Examples"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:34
+msgid "``$logline(This is a text message.)`` will add \"Script Logger: This is a test message.\" to the log at the ``Info`` level."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:36
+msgid "``$logline(This is another text message.,)`` will add \"Script Logger: This is another test message.\" to the log at the ``Info`` level."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:38
+msgid "``$logline(This is an error message.,E)`` will add \"Script Logger: This is an error message.\" to the log at the ``Error`` level."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:40
+msgid "``$logline(This is another error message.,Error)`` will add \"Script Logger: This is another error message.\" to the log at the ``Error`` level."
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:44
+msgid "Source Code"
+msgstr ""
+
+#: ../../script_logger/user_guide.rst:46
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-script-logger>`_."
+msgstr ""
