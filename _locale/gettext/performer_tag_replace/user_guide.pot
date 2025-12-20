@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.20\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-20 09:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../performer_tag_replace/user_guide.rst:2
+msgid "Performer Tag Replace"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:7
+msgid "This plugin provides the ability to replace text in performer tags. Once installed a settings page will be added to Picard's options, which is where the plugin is configured."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:13
+msgid "This plugin reads the track metadata provided to Picard, extracts the list of associated instrument and vocal performers, and updates the performer keys based on the original/replacement pairs specified in the settings panel."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:17
+msgid "Option Settings"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:19
+msgid "The settings panel allows the user to provide a list of the original/replacement pairs used to modify the keys for the performer tags."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:21
+msgid "Default Settings Page"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:26
+msgid "Each pair must be entered on a separate line in the form:"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:32
+msgid "Blank lines and lines beginning with an equals sign (=) will be ignored. Replacements will be made in the order they are found in the list."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:34
+msgid "There is also a setting which allows the user to choose whether or not to apply the replacements to the artist values in addition to the instrument / vocal keys. By default, only the keys are processed."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:38
+msgid "Examples"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:40
+msgid "**Example 1:**"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:42
+msgid "Suppose that you don't like instruments listed as \"instrument family\", but would rather have it shown as the plural of the instrument. This could be done using the following:"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:52
+msgid "Note that the last line begins with a single space."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:54
+msgid "This would cause the performer credit ``Performer [guitar family]: Chet Atkins`` to be changed to ``Performer [guitars]: Chet Atkins``."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:56
+msgid "Note that the ``s family=ses`` would match an instrument family where the instrument ended in \"s\" and add \"es\" rather than just an \"s\". For example if there was a \"bass family\", this would change it to \"basses\" rather than \"basss\". (As of this writing, I don't think there are any cases in the database where the instrument in an instrument family ends with an \"s\", so that replacement pair should never be triggered.)"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:59
+msgid "**Example 2:**"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:61
+msgid "Suppose that you don't like the term \"additional\", but would rather have it shown as \"extra\". This could be done using the following:"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:70
+msgid "This would cause the performer credit ``Performer [additional background vocals]: Jeen`` to be changed to ``Performer [extra background vocals]: Jeen``."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:73
+msgid "**Example 3:**"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:75
+msgid "Suppose that you want to show the instrument as \"drums\" rather than \"drums (drum set)\", or \"membranophone\". This could be done using the following:"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:86
+msgid "This would cause the performer credit ``Performer [membranophone]: Ringo Starr`` to be changed to ``Performer [drums]: Ringo Starr``."
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:90
+msgid "Source Code"
+msgstr ""
+
+#: ../../performer_tag_replace/user_guide.rst:92
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-performer-tag-replace>`_."
+msgstr ""
