@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.22\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-22 09:11-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../submit_isrc/user_guide.rst:2
+msgid "Submit ISRC"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:7
+msgid "This plugin provides the ability to submit ISRCs to the MusicBrainz server specified in the Option settings."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:13
+msgid "This plugin adds a right click option on an album to submit the ISRCs to the MusicBrainz server specified in the Option settings."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:15
+msgid "To use this function, you must first match your files to the appropriate tracks for a release. Once this is done, but before you save your files if you have Picard set to overwrite the ``isrc`` tag in your files, right-click the release and select \"Submit ISRCs\" in the \"Plugins\" section. For each file that has a single valid ISRC in its metadata, the ISRC will be added to the recording on the release if it does not already exist. Once all tracks for the release have been processed, the missing ISRCs will be submitted to MusicBrainz."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:17
+msgid "If a file's metadata contains multiple ISRCs, such as if the file has already been tagged, then no ISRCs will be submitted for that file."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:19
+msgid "If one of the files contains an invalid ISRC, or if the same ISRC appears in the metadata for two or more files, then a notice will be displayed and the submission process will be aborted."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:21
+msgid "When ISRCs have been submitted, a notice will be displayed showing whether or not the submission was successful."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:25
+msgid "Option Settings"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:27
+msgid "There are no option settings for this plugin."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:31
+msgid "Examples"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:33
+msgid "There are no examples for this plugin."
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:37
+msgid "Source Code"
+msgstr ""
+
+#: ../../submit_isrc/user_guide.rst:39
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-submit-isrc>`_."
+msgstr ""
