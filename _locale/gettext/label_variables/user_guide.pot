@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2025.12.26\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 18:31-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../label_variables/user_guide.rst:2
+#: ../../label_variables/user_guide.rst:22
+msgid "Label Variables"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:7
+msgid "This plugin provides variables containing label information for a release for use in user or file naming scripts."
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:13
+msgid "This plugin reads the release metadata provided to Picard and exposes the information in a number of additional variables for use in Picard scripts."
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:15
+msgid "This plugin makes no additional calls to the MusicBrainz website api for the information."
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:19
+msgid "Variables Created"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:24
+msgid "**_label_ids_multi** - All label IDs listed, as a multi-value"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:25
+msgid "**_label_names_multi** - All label names listed, as a multi-value"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:26
+msgid "**_label_sort_names_multi** - All label names listed (sort name), as a multi-value"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:27
+msgid "**_label_disambig_multi** - All label disambiguations listed, as a multi-value"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:28
+msgid "**_label_catalog_multi** - All label catalog numbers listed, as a multi-value"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:29
+msgid "**_label_label_count** - Count of the number of labels listed"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:30
+msgid "**_label_catalog_count** - Count of all catalog numbers listed"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:34
+msgid "Variables will not be created if the data is missing."
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:38
+msgid "Option Settings"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:40
+msgid "There are no option settings for this plugin."
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:44
+msgid "Examples"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:46
+msgid "Using the album \"`Pretenders (club edition) <https://musicbrainz.org/release/21c0e66c-7994-474b-af1d-5c73578aba61>`_\" by `Pretenders <https://musicbrainz.org/artist/e9c832b0-384b-4ee6-aec0-111372784aac>`_, the label variables created for the album are:"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:48
+msgid "**_label_ids_multi** = ['132282be-91ba-4185-ae10-0cb570a1288c', '851b17a3-8353-47fc-9f7b-cba5392b41cd', 'c4f2cf49-b57c-4cc1-8061-f54400704ac4', 'be0fec81-5c18-4494-8bbf-0d81dec006bf']"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:49
+msgid "**_label_names_multi** = ['BMG Direct', 'Real Records', 'Rhino', 'Sire Records']"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:50
+msgid "**_label_sort_names_multi** = ['BMG Direct', 'Real Records', 'Rhino', 'Sire Records']"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:51
+msgid "**_label_disambig_multi** = [\"BMG's direct marketing company/club editions\", 'WEA subsidiary', 'reissue label', '']"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:52
+msgid "**_label_catalog_multi** = ['D220040', 'R2 74178', 'R2 74178', 'R2 74178']"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:53
+msgid "**_label_label_count** = 4"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:54
+msgid "**_label_catalog_count** = 4"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:58
+msgid "Source Code"
+msgstr ""
+
+#: ../../label_variables/user_guide.rst:60
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-label-variables>`_."
+msgstr ""
