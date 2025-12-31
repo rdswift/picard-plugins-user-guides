@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.27\n"
+"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-27 16:06-0700\n"
+"POT-Creation-Date: 2025-12-31 10:56-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,65 +29,101 @@ msgid "This plugin adds a scripting function to allow writing text to an output 
 msgstr ""
 
 #: ../../file_writer/user_guide.rst:11
+msgid "Use with caution, because if not properly configured it could overwrite existing files, resulting in unintended consequences!"
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:14
 msgid "What it Does"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:13
+#: ../../file_writer/user_guide.rst:16
 msgid "This plugin provides a new script function ``$writeline()`` to write entries to a file."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:15
+#: ../../file_writer/user_guide.rst:18
 msgid "Usage: **$writeline(file,text[,reset])**"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:17
-msgid "This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming Options** settings. If the target path does not exist, it will be created automatically."
+#: ../../file_writer/user_guide.rst:20
+msgid "This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming** option settings. If the target path does not exist, it will be created automatically."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:21
+#: ../../file_writer/user_guide.rst:22
+msgid "The plugin uses the following logic to determine whether or not to write to the file:"
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:24
+msgid "If the file does not exist, enter the file into the file list and write to the file."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:26
+msgid "If the file exists and is in the file list, write to the file."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:28
+msgid "If the file exists and does not appear in the file list, do **not** write to the file and log a warning."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:32
 msgid "The text will be written to the file with a character encoding of UTF-8."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:25
+#: ../../file_writer/user_guide.rst:36
 msgid "Option Settings"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:27
-msgid "There are no option settings for this plugin."
+#: ../../file_writer/user_guide.rst:38
+msgid "The settings panel allows the user to provide a list of the files allowed to be written, as well as edit the list of allowed files that have been automatically entered."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:31
+#: ../../file_writer/user_guide.rst:40
+msgid "Default Settings Page"
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:45
+msgid "Each file must be entered on a separate line."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:47
+msgid "Blank lines will be automatically removed, and the lists will be sorted automatically when the settings are saved."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:49
+msgid "There is also a setting which allows the user to choose whether or not file writing is allowed. By default, file writing is diababled."
+msgstr ""
+
+#: ../../file_writer/user_guide.rst:53
 msgid "Examples"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:34
+#: ../../file_writer/user_guide.rst:56
 msgid "Example 1"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:36
+#: ../../file_writer/user_guide.rst:58
 msgid "The following will write a text file containing a list of all the tracks on an album. The file name will be in the form \"AlbumArtist - Album\" and will be written in the main output directory."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:46
+#: ../../file_writer/user_guide.rst:68
 msgid "Example 2"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:48
+#: ../../file_writer/user_guide.rst:70
 msgid "Similar to Example 1, the following will write a text file containing a list of all the tracks on an album.  The file name will be in the form \"AlbumArtist - Album\" and will be written in a separate Windows directory called ``C:\\Albums``."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:58
+#: ../../file_writer/user_guide.rst:80
 msgid "Example 3"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:60
+#: ../../file_writer/user_guide.rst:82
 msgid "The following will keep a log of all albums processed. The file will be written to the ``/var/log/PicardProcessing`` file on a Linux system. Note that this should be added to the file renaming script so that the log entry is only written when the release is saved."
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:70
+#: ../../file_writer/user_guide.rst:92
 msgid "Source Code"
 msgstr ""
 
-#: ../../file_writer/user_guide.rst:72
+#: ../../file_writer/user_guide.rst:94
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-file-writer>`_."
 msgstr ""

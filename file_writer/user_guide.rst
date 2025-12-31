@@ -6,6 +6,9 @@ Overview
 
 This plugin adds a scripting function to allow writing text to an output file.
 
+.. warning::
+
+   Use with caution, because if not properly configured it could overwrite existing files, resulting in unintended consequences!
 
 What it Does
 ----------------
@@ -14,7 +17,15 @@ This plugin provides a new script function ``$writeline()`` to write entries to 
 
 Usage: **$writeline(file,text[,reset])**
 
-This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming Options** settings. If the target path does not exist, it will be created automatically.
+This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming** option settings. If the target path does not exist, it will be created automatically.
+
+The plugin uses the following logic to determine whether or not to write to the file:
+
+1. If the file does not exist, enter the file into the file list and write to the file.
+
+2. If the file exists and is in the file list, write to the file.
+
+3. If the file exists and does not appear in the file list, do **not** write to the file and log a warning.
 
 .. note::
 
@@ -24,7 +35,18 @@ This will write ``text`` (followed by a newline) to ``file``. The text will be a
 Option Settings
 ----------------
 
-There are no option settings for this plugin.
+The settings panel allows the user to provide a list of the files allowed to be written, as well as edit the list of allowed files that have been automatically entered.
+
+.. image:: file_writer_settings.png
+   :alt: Default Settings Page
+   :align: center
+
+|
+| Each file must be entered on a separate line.
+
+Blank lines will be automatically removed, and the lists will be sorted automatically when the settings are saved.
+
+There is also a setting which allows the user to choose whether or not file writing is allowed. By default, file writing is diababled.
 
 
 Examples
