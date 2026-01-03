@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2026.01.02\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-02 17:03-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../keep_only_tags/user_guide.rst:2
+msgid "Keep Only Tags"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:7
+msgid "This plugin allows the user to determine which tags are written to the output files by Picard."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:11
+msgid "Use with caution, because any tags not included in the user's \"keep\" list will not be written to the output files."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:14
+msgid "What it Does"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:16
+msgid "This plugin reads the album and track metadata provided to Picard and converts any tags not found in the user's \"keep\" list into hidden variables by adding \"``_ko_``\" to the start of the tag name. The hidden variabled will not be written to the output file."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:20
+msgid "This plugin is configured to run after all other plugins, so that it is working with the final information that may have been updated by another plugin."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:24
+msgid "Option Settings"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:26
+msgid "The settings panel allows the user to provide a list of the tags to keep."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:28
+msgid "Default Settings Page"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:33
+msgid "Tags that you wish to keep are entered in the options settings, with each tag on a separate line. Blank lines will be ignored. The entries are not case-sensitive."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:35
+msgid "If a tag in the list ends with an asterisk (``*``), then it will keep any tags beginning with the tag. For example, if your list contains \"``performer:\\*``\" then all tags beginning with \"``performer:``\" will be kept, such as \"``performer:instrument``\" and \"``performer:vocals``\"."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:37
+msgid "All tags that are removed will still be available as variables with \"``_ko_``\" prepended to the tag name. For example, if you choose not to keep the \"``musicbrainz_trackid``\" tag, it will still be available to scripts as \"``%_ko_musicbrainz_trackid%``\"."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:42
+msgid "Examples"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:44
+msgid "There are no examples."
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:48
+msgid "Source Code"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:50
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-keep-only-tags>`_."
+msgstr ""
