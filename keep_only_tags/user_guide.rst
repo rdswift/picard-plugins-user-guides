@@ -4,11 +4,12 @@ Keep Only Tags
 Overview
 ---------
 
-This plugin allows the user to determine which tags are written to the output files by Picard.
+This plugin provides a different approach for the user to determine which tags are written to the output files by Picard. If the user only wants to keep a small subset of the tags provided by MusicBrainz, they can specify only the tags that they want to keep rather than develop a lengthy tagger script to remove all of the tags that they don't want.
 
 .. warning::
 
-   Use with caution, because any tags not included in the user's "keep" list will not be written to the output files.
+   Use with caution, because any tags not included in the user's "keep" list will **not** be written to the output files. As always, it is recommended that you first test your setup on a **copy** of a small subset of files to ensure that the results are as expected.
+
 
 What it Does
 ----------------
@@ -17,7 +18,7 @@ This plugin reads the album and track metadata provided to Picard and converts a
 
 .. note::
 
-   This plugin is configured to run after all other plugins, so that it is working with the final information that may have been updated by another plugin.
+   This plugin is configured to run before all other plugins, so that it is working with the standard set of tags provided by MusicBrainz.
 
 
 Option Settings
