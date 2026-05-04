@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picard Plugins User Guides v2026.05.03\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-03 14:13-0600\n"
+"POT-Creation-Date: 2026-05-03 20:03-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,7 @@ msgid "The final option is whether or not to create an initial commit to the git
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:34
-msgid "Once you have entered all of the required information and selected the desired options, you can click the :guilabel:`Create` button to create the plugin framework files and git repository in the specified target directory. The system first checks that the target directory exists or can be created, and that it has not already been initialized as a git repository. You will then be prompted to confirm whether or not you want to proceed with creating the plugin files."
+msgid "Once you have entered all of the required information and selected the desired options, you can click the :guilabel:`Create` button to create the plugin framework files and git repository in the specified target directory. The system first checks that the target directory exists or can be created, and that it is empty. You will then be prompted to confirm whether or not you want to proceed with creating the plugin files."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:38

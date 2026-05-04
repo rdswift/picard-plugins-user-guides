@@ -31,7 +31,7 @@ There is also an option to create a plugin with multi-language support, which wi
 
 The final option is whether or not to create an initial commit to the git repository for the plugin. The default is to create an initial commit. The initial commit will be made with the generated plugin files, and the commit message will be "Initial commit". The author of the commit will be set to the name and email address provided in the plugin information. Regardless of the setting of this option, a git repository will be initialized in the target directory.
 
-Once you have entered all of the required information and selected the desired options, you can click the :guilabel:`Create` button to create the plugin framework files and git repository in the specified target directory. The system first checks that the target directory exists or can be created, and that it has not already been initialized as a git repository. You will then be prompted to confirm whether or not you want to proceed with creating the plugin files.
+Once you have entered all of the required information and selected the desired options, you can click the :guilabel:`Create` button to create the plugin framework files and git repository in the specified target directory. The system first checks that the target directory exists or can be created, and that it is empty. You will then be prompted to confirm whether or not you want to proceed with creating the plugin files.
 
 .. caution::
 
