@@ -46,7 +46,7 @@ Plugin Categories
 
 The available plugin categories are:
 
-- **Cover Art**: The plugin provides cover art related processing, such as adding a new cover art source.
+- **Cover Art**: The plugin provides cover art related processing, such as adding a new cover art source or cover art filters.
 - **Formats**: The plugin provides additional or modified functionality regarding supported file formats, including support for a new file format.
 - **Metadata**: The plugin modifies the metadata for an album or track, and is typically executed when the information is retrieved from MusicBrainz when an album is loaded.
 - **Other**: The plugin provides functionality not covered by the other specific categories, or in addition to that provided by other categories.

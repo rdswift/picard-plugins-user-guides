@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picard Plugins User Guides v2026.05.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-11 11:27-0600\n"
+"POT-Creation-Date: 2026-05-11 13:18-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,7 +113,7 @@ msgid "The available plugin categories are:"
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:49
-msgid "**Cover Art**: The plugin provides cover art related processing, such as adding a new cover art source."
+msgid "**Cover Art**: The plugin provides cover art related processing, such as adding a new cover art source or cover art filters."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:50
