@@ -4,7 +4,7 @@ Create Local Plugin
 Overview
 ---------
 
-This plugin assists in the creation of a local plugin by preparing the plugin framework files and git repository.
+This plugin assists in the creation of a local plugin by preparing the plugin framework files and git repository. Once installed and activated, it adds an option page called "Create Local Plugin" under the "Plugins" section. This is how the plugin's functionality is accessed.
 
 
 What it Does
