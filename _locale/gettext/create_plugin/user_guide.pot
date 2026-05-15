@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.05.11\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.05.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-11 13:18-0600\n"
+"POT-Creation-Date: 2026-05-14 21:06-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "Overview"
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:7
-msgid "This plugin assists in the creation of a local plugin by preparing the plugin framework files and git repository."
+msgid "This plugin assists in the creation of a local plugin by preparing the plugin framework files and git repository. Once installed and activated, it adds an option page called \"Create Local Plugin\" under the \"Plugins\" section. This is how the plugin's functionality is accessed."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:11
