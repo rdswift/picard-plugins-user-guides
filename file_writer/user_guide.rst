@@ -17,7 +17,7 @@ This plugin provides a new script function ``$writeline()`` to write entries to 
 
 Usage: **$writeline(file,text[,reset])**
 
-This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon or path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming** option settings. If the target path does not exist, it will be created automatically.
+This will write ``text`` (followed by a newline) to ``file``. The text will be appended to the file unless ``reset`` is set, in which case the file will be overwritten. If the destination ``file`` path is not specified as an absolute path to the destination file (beginning with a Windows drive letter and colon, or with a path separator), then the path will be considered relative to the **Destination directory** specified in Picard's **File Naming** option settings. If the target path does not exist, it will be created automatically.
 
 The plugin uses the following logic to determine whether or not to write to the file:
 
