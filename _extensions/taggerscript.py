@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Sphinx extension to add a Picard Tagger Script lexer.
 """
 

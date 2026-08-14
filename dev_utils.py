@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """Python script used to provide development support functions.
 """
 # Copyright (C) 2020-2025 Bob Swift
