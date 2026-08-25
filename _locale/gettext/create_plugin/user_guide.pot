@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.05.14\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.08.25\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 21:06-0600\n"
+"POT-Creation-Date: 2026-08-25 11:17-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "Overview"
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:7
-msgid "This plugin assists in the creation of a local plugin by preparing the plugin framework files and git repository. Once installed and activated, it adds an option page called \"Create Local Plugin\" under the \"Plugins\" section. This is how the plugin's functionality is accessed."
+msgid "This plugin assists in the creation of a local plugin by preparing the plugin framework files and optionally initializing the git repository. Once installed and activated, it adds an option page called \"Create Local Plugin\" under the \"Plugins\" section. This is how the plugin's functionality is accessed."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:11
@@ -33,7 +33,7 @@ msgid "What it Does"
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:13
-msgid "It gathers some information from the user, and then writes the basic framework files to the specified directory and initializes the git repository."
+msgid "It gathers some information from the user, and then writes the basic framework files to the specified directory and optionally initializes the git repository."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:15
@@ -81,181 +81,189 @@ msgid "**Multi-language Support**: This option allows you to create a plugin wit
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:31
-msgid "**Create Initial Commit**: This option determines whether or not to create an initial commit to the git repository for the plugin. The default is to create an initial commit. The initial commit will be made with the generated plugin files, and the commit message will be \"Initial commit\". The author of the commit will be set to the name and email address provided in the plugin information. Regardless of the setting of this option, a git repository will be initialized in the target directory."
+msgid "**Initialize the git repository**: This option determines whether or not to initialize a git repository for the plugin. The default is to not initialize a git repository. Initializing a git repository will create a new git repository in the plugin directory, and add a ``.gitignore`` file with some common files and directories ignored for plugin development. It will also allow you to make commits to the repository to track changes to the plugin files, and push the repository to a remote hosting service such as GitHub if desired."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:32
+msgid "**Create Initial Commit**: This option determines whether or not to create an initial commit to the git repository for the plugin. The default is to not create an initial commit. The initial commit will be made with the generated plugin files, and the commit message will be \"Initial commit\". The author of the commit will be set to the name and email address provided in the plugin information. Note that this option is not available if the \"Initialize the git repository\" option is not enabled."
+msgstr ""
+
+#: ../../create_plugin/user_guide.rst:33
 msgid "**Open Plugin Directory**: This option determines whether or not to open the directory of the newly created plugin in your system file browser after the plugin has been created. This allows you to inspect the plugin files that have been generated, and edit the files to customize the plugin as required."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:34
+#: ../../create_plugin/user_guide.rst:35
 msgid "Once you have entered all of the required information and selected the desired options, you can click the :guilabel:`Create` button to create the plugin framework files and git repository in the plugin-specific directory under the specified root directory. The system first checks that the target directory exists or can be created, and that it is empty. You will then be prompted to confirm whether or not you want to proceed with creating the plugin files."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:38
+#: ../../create_plugin/user_guide.rst:39
 msgid "It is recommended that you review the information entered and confirm that it is correct before proceeding. This is because the plugin files will be generated and the git repository will be initialized based on the information you have provided. If you need to make any changes, you can click :guilabel:`No` to return to the plugin creation form, and make any necessary changes before confirming again. All items including plugin title, author information, and description can be edited in the generated files later if necessary."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:40
-msgid "When you have confirmed, the plugin will generate the necessary files for the plugin framework, including an ``__init__.py`` file, a ``MANIFEST.toml`` file with the plugin metadata, and a ``README.md`` file with the plugin description. If multi-language support was selected, then additional files and structure will be created for handling translations. If an options page and settings template was selected, then additional user interface files will be created. A git repository with a ``.gitignore`` file will also be initialized in the target directory. If the option to create an initial commit was selected, then an initial commit will be made with the generated plugin files."
+#: ../../create_plugin/user_guide.rst:41
+msgid "When you have confirmed, the plugin will generate the necessary files for the plugin framework, including an ``__init__.py`` file, a ``MANIFEST.toml`` file with the plugin metadata, and a ``README.md`` file with the plugin description. If multi-language support was selected, then additional files and structure will be created for handling translations. If an options page and settings template was selected, then additional user interface files will be created. A git repository with a ``.gitignore`` file will also be initialized in the target directory if that option was enabled. If the option to create an initial commit was selected, then an initial commit will be made with the generated plugin files."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:42
-msgid "Once the plugin has been created, you can then open the plugin directory in your file browser or terminal to view the generated files and git repository. You can then customize the generated plugin files as needed to implement the desired functionality for your plugin. You can also use the initialized git repository to manage the version control for your plugin development."
+#: ../../create_plugin/user_guide.rst:43
+msgid "Once the plugin has been created, you can then open the plugin directory in your file browser or terminal to view the generated files and git repository. You can then customize the generated plugin files as needed to implement the desired functionality for your plugin. You can also use the initialized git repository, if enabled, to manage the version control for your plugin development."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:45
+#: ../../create_plugin/user_guide.rst:46
 msgid "Plugin Categories"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:47
+#: ../../create_plugin/user_guide.rst:48
 msgid "The available plugin categories are:"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:49
+#: ../../create_plugin/user_guide.rst:50
 msgid "**Cover Art**: The plugin provides cover art related processing, such as adding a new cover art source or cover art filters."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:50
+#: ../../create_plugin/user_guide.rst:51
 msgid "**Formats**: The plugin provides additional or modified functionality regarding supported file formats, including support for a new file format."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:51
+#: ../../create_plugin/user_guide.rst:52
 msgid "**Metadata**: The plugin modifies the metadata for an album or track, and is typically executed when the information is retrieved from MusicBrainz when an album is loaded."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:52
+#: ../../create_plugin/user_guide.rst:53
 msgid "**Other**: The plugin provides functionality not covered by the other specific categories, or in addition to that provided by other categories."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:53
+#: ../../create_plugin/user_guide.rst:54
 msgid "**Scripting**: The plugin provides scripting functionality, such as new script functions or new tags/variables (perhaps added via a metadata processor)."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:54
+#: ../../create_plugin/user_guide.rst:55
 msgid "**UI**: The plugin provides user interface modifications, such as new main or context menu actions, or other display modifications."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:57
+#: ../../create_plugin/user_guide.rst:58
 msgid "Example Code Templates"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:59
+#: ../../create_plugin/user_guide.rst:60
 msgid "The example code templates are selected from a list available by clicking the :guilabel:`Select…` button."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:61
+#: ../../create_plugin/user_guide.rst:62
 msgid "Example Code Template Selector"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:65
+#: ../../create_plugin/user_guide.rst:66
 msgid "The available example code templates that can be included in the generated plugin file include:"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:67
+#: ../../create_plugin/user_guide.rst:68
 msgid "**Album/Track metadata processing**: Code template for the MusicBrainz metadata post-processor hook, including both Album and Track processing examples."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:68
+#: ../../create_plugin/user_guide.rst:69
 msgid "**Menu item**: Code template for the hook used to add right-click context menu actions for albums, tracks and files in 'Unmatched Files', 'Clusters' and the 'ClusterList' (parent folder of Clusters). Actions can also be added to the main Picard menu bar."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:69
-msgid "**Options page and settings**: Code template for adding plugin-specific user settings and an options page for managing the settings."
-msgstr ""
-
 #: ../../create_plugin/user_guide.rst:70
-msgid "**Album post-removal processing**: Code template for the hook called after a file has been removed from a track (on the right-hand pane of Picard)."
+msgid "**Options page and settings**: Code template for adding plugin-specific user settings and an options page for managing the settings. This includes example code for registering options, and saving and loading the settings. It also includes example code for adding the settings to the Option Profiles page for managing the plugin settings as part of an option profile."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:71
-msgid "**File post-load processing**: Code template for the hook called after a file has been loaded into Picard. This could for example be used to load additional data for a file."
+msgid "**Album post-removal processing**: Code template for the hook called after a file has been removed from a track (on the right-hand pane of Picard)."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:72
-msgid "**File post add to track processing**: Code template for the hook called after a file has been added to a track (on the right-hand pane of Picard)."
+msgid "**File post-load processing**: Code template for the hook called after a file has been loaded into Picard. This could for example be used to load additional data for a file."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:73
-msgid "**File post remove from track processing**: Code template for the hook called after a file has been removed from a track (on the right-hand pane of Picard)."
+msgid "**File post add to track processing**: Code template for the hook called after a file has been added to a track (on the right-hand pane of Picard)."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:74
-msgid "**File pre-save processing**: Code template for the hook called before a file has been saved. This can for example be used to run additional pre-processing on the file."
+msgid "**File post remove from track processing**: Code template for the hook called after a file has been removed from a track (on the right-hand pane of Picard)."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:75
-msgid "**File post-save processing**: Code template for the hook called after a file has been saved. This can for example be used to run additional post-processing on the file or write extra data. Note that the file's metadata is already the newly saved metadata."
+msgid "**File pre-save processing**: Code template for the hook called before a file has been saved. This can for example be used to run additional pre-processing on the file."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:76
-msgid "**Scripting functions**: Code template for adding new scripting functions to Picard, including examples with varying numbers of arguments. This provides the descriptions used in the scripting auto-completion and documentation."
+msgid "**File post-save processing**: Code template for the hook called after a file has been saved. This can for example be used to run additional post-processing on the file or write extra data. Note that the file's metadata is already the newly saved metadata."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:77
-msgid "**Scripting variables**: Code template for adding new scripting variables to Picard, used to describe the variables in the scripting auto-completion and documentation. This is often used in conjunction with metadata processors that create new variables."
+msgid "**Scripting functions**: Code template for adding new scripting functions to Picard, including examples with varying numbers of arguments. This provides the descriptions used in the scripting auto-completion and documentation."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:78
+msgid "**Scripting variables**: Code template for adding new scripting variables to Picard, used to describe the variables in the scripting auto-completion and documentation. This is often used in conjunction with metadata processors that create new variables."
+msgstr ""
+
+#: ../../create_plugin/user_guide.rst:79
 msgid "**File format**: Code template to extend Picard with support for additional file formats. See the existing file format implementations for details on how to implement the ``_load`` and ``_save`` methods."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:82
+#: ../../create_plugin/user_guide.rst:83
 msgid "Option Settings"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:84
+#: ../../create_plugin/user_guide.rst:85
 msgid "Once you have created a plugin, the following settings are remembered for the next time it is used:"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:86
+#: ../../create_plugin/user_guide.rst:87
 msgid "Author Name"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:87
+#: ../../create_plugin/user_guide.rst:88
 msgid "Author Email"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:88
+#: ../../create_plugin/user_guide.rst:89
 msgid "Root Directory for generated plugin directories"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:89
+#: ../../create_plugin/user_guide.rst:90
 msgid "License selected"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:90
+#: ../../create_plugin/user_guide.rst:91
 msgid "Plugin Templates selected"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:91
+#: ../../create_plugin/user_guide.rst:92
 msgid "Plugin Categories selected"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:92
-msgid "Whether or not to create an initial commit to the git repository"
-msgstr ""
-
 #: ../../create_plugin/user_guide.rst:93
-msgid "Whether or not to create a plugin with multi-language support, and the base language for the plugin if multi-language support is enabled."
+msgid "Whether or not to initialize a git repository for the plugin"
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:94
+msgid "Whether or not to create an initial commit to the git repository"
+msgstr ""
+
+#: ../../create_plugin/user_guide.rst:95
+msgid "Whether or not to create a plugin with multi-language support, and the base language for the plugin if multi-language support is enabled."
+msgstr ""
+
+#: ../../create_plugin/user_guide.rst:96
 msgid "Whether or not to open the plugin directory in your file browser automatically when a plugin has been created."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:98
+#: ../../create_plugin/user_guide.rst:100
 msgid "Examples"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:100
+#: ../../create_plugin/user_guide.rst:102
 msgid "There are no examples for this plugin."
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:104
+#: ../../create_plugin/user_guide.rst:106
 msgid "Source Code"
 msgstr ""
 
-#: ../../create_plugin/user_guide.rst:106
+#: ../../create_plugin/user_guide.rst:108
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-create-plugin>`_."
 msgstr ""
