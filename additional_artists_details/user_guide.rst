@@ -18,7 +18,9 @@ This plugin reads the album and track metadata provided to Picard, extracts the 
 
 The plugin maintains a cache of artist and area information retrieved from MusicBrainz to avoid making multiple API calls for the same information. This can significantly reduce the time required to load an album by eliminating unnecessary API calls for information already retrieved.
 
-Area and (optionally) artist information is saved to a persistent cache file so that it is retained between Picard sessions. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file.
+There is a persistent cache system that utilizes a persistent cache file to retain the information from the cache for use in subsequent Picard sessions.
+
+Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file.
 
 When the plugin is initialized, it will populate its working cache from the persistent cache file if it is available. When an album is retrieved from MusicBrainz, once loading is complete, the persistent cache file is updated automatically with any new items in the working cache.
 
@@ -46,11 +48,17 @@ These options determine whether or not County, Municipality and Subdivision info
 Persistent cache
 +++++++++++++++++
 
+There is an option to determine whether the persistent cache system is used. It is **strongly** recommended that this be enabled.
+
 The working cache is periodically stored to a persistent cache file, in JSON format, to allow the information to be used in subsequent Picard sessions. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access.
 
 Area information is always stored in the persistent cache file, because area lookups produce the largest amount of API calls that impact album loading time.
 
-Artist information storage in the persistent cache file is optional, but recommended. Where area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain this updated information. There are two ways to address this. One way is to disable including the artists in the cache file, and the other way is to remove one or more selected artists from the cache using the cache editor. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album.
+Artist information storage in the persistent cache file is optional, but recommended. Where area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain this updated information. There are two ways to address this. One way is to disable including the artists in the persistent cache file, and the other way is to remove one or more selected artists from the current working cache using the cache editor. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album.
+
+.. note::
+
+   If use of the persistent cache system is disabled, no information will be written to, or read from, the persistent cache file.
 
 .. image:: cache_editor.png
    :alt: Additional Artists Details Cache Editor
