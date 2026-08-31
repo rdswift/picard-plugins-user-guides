@@ -22,6 +22,7 @@ MusicBrainz Picard is a powerful and flexible application for tagging and organi
    called_folk_dance_tags/user_guide
    combine_performer_tags/user_guide
    create_plugin/user_guide
+   dump_loaded_album/user_guide
    file_writer/user_guide
    format_performer_tags/user_guide
    genre_mapper/user_guide
