@@ -8,7 +8,7 @@ This plugin provides specialized album and track variables with artist details s
 
 .. note::
 
-   This plugin makes additional calls to the MusicBrainz website api for the information, which will slow down retrieving album information from MusicBrainz. This will be particularly noticable when there are many different album or track artists, such as on a \[Various Artists\] release. There is an option to disable track artist processing, which can significantly increase the processing speed if you are only interested in album artist details.
+   This plugin makes additional calls to the MusicBrainz website API for the information, which will slow down retrieving album information from MusicBrainz. This will be particularly noticable when there are many different album or track artists, such as on a \[Various Artists\] release. There is an option to disable track artist processing, which can significantly increase the processing speed if you are only interested in album artist details.
 
 
 What it Does
@@ -18,11 +18,11 @@ This plugin reads the album and track metadata provided to Picard, extracts the 
 
 The plugin maintains a cache of artist and area information retrieved from MusicBrainz to avoid making multiple API calls for the same information. This can significantly reduce the time required to load an album by eliminating unnecessary API calls for information already retrieved.
 
-There is a persistent cache system that utilizes a persistent cache file to retain the information from the cache for use in subsequent Picard sessions.
+There is a persistent cache system that utilizes a sqlite file to retain the information from the cache for use in subsequent Picard sessions.
 
 Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file.
 
-When the plugin is initialized, it will populate its working cache from the persistent cache file if it is available. When an album is retrieved from MusicBrainz, once loading is complete, the persistent cache file is updated automatically with any new items in the working cache.
+When artist and area information is retrieved from MusicBrainz, the persistent cache file is updated automatically with any new items, and the items are added to the session working cache.
 
 Option Settings
 ----------------
@@ -50,11 +50,11 @@ Persistent cache
 
 There is an option to determine whether the persistent cache system is used. It is **strongly** recommended that this be enabled.
 
-The working cache is periodically stored to a persistent cache file, in JSON format, to allow the information to be used in subsequent Picard sessions. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access.
+All area records, and optionally artist records, are stored to a persistent cache sqlite database file as they are retrieved from the MusicBrainz API. This is to allow the information to be used in subsequent Picard sessions without having to repeat the API calls. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access.
 
-Area information is always stored in the persistent cache file, because area lookups produce the largest amount of API calls that impact album loading time.
+Area information is always stored in the persistent cache file, because area lookups produce the largest amount of API calls that impact album loading time. Artist information storage in the persistent cache file is optional, but recommended.
 
-Artist information storage in the persistent cache file is optional, but recommended. Where area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain this updated information. There are two ways to address this. One way is to disable including the artists in the persistent cache file, and the other way is to remove one or more selected artists from the current working cache using the cache editor. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album.
+While area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain any updated information that has changed since the artist record was stored. There are two ways to address this. One way is to disable including the artists in the persistent cache file, and the other way is to remove one or more selected artists from the current working cache using the cache editor. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album.
 
 .. note::
 
@@ -66,21 +66,41 @@ Artist information storage in the persistent cache file is optional, but recomme
 
 |
 
-The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the current cache by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter.
+The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the cache database file by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter.
 
 Because the area information causes numerous additional calls to the API resulting in significant delays, and because the information rarely changes, the area information items cannot be removed from the cache with the cache editor.
 
 The persistent cache action buttons include:
 
-- :guilabel:`Load` - Load the items from the persistent cache file into the current working cache.
-- :guilabel:`Save` - Save the items from the current working cache to the persistent cache file.
-- :guilabel:`Edit` - Open the cache editor dialog.
-- :guilabel:`Import` - Import items from a user-specified cache file into the current working cache.
-- :guilabel:`Export` - Export the items from the current working cache to a user-specified cache file. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others.
+- :guilabel:`Import` - Import items from a user-specified cache file into the cache. This can import backup files in CSV format saved using the Export function, or JSON format files saved using the Export function from prior versions of the plugin.
+- :guilabel:`Export` - Export the items from the current cache database to a user-specified file in CSV format. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others.
+- :guilabel:`Edit` - Open the cache editor dialog. This allows you to review, and optionally remove, the artist records from the cache so that they are refreshed the next time they are included on an album retrieved from MusicBrainz.
+- :guilabel:`Delete` - Remove the cache database file from your system. This button is disabled if there is no existing cache database file, or if the option to use the persistent cache system is enabled.
 
 .. caution::
 
-   When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :guilabel:`Save` or :guilabel:`Export` actions.
+   When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :guilabel:`Export` action.
+
+There is also a :guilabel:`Status` button which shows information about the current session cache as well as the cache database.
+
+.. image:: cache_status.png
+   :alt: Additional Artists Details Cache Status
+   :align: center
+
+|
+
+This displays the number of artist and area records currently stored in the session cache and the cache database file. It also indicates if there are any missing area parent records, and how many, and whether the missing area background processing is currently active.
+
+Cache Background Processing
+++++++++++++++++++++++++++++
+
+Occasionally, area information is not retrieved from MusicBrainz as part of the normal album retrieval. This is typically the result of the MusicBrainz API being overloaded (usually by AI scrapers). Missing area information can result in incomplete area information in tags generated for an artist.
+
+The plugin attempts to address this by periodically reviewing the cache database to identify any missing parent areas, and generating requests for the information from the MusicBrainz API in the background. This functionality is enabled by default (strongly recommended), however there is an option to disable it. You can also set the number of seconds to wait (from 20 to 600 seconds) between sending area requests to the API.
+
+The background processing will be automatically terminated if there are no missing parent area records, or if there was an unrecoverable error encounted such as too many retries due to the API being unavailable. Errors causing the processing to be terminated are logged.
+
+If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Start background area retrieval processing` action from the main Picard menu bar.
 
 
 Variables Created
