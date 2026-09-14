@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.09.12\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.09.14\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-12 19:15-0600\n"
+"POT-Creation-Date: 2026-09-14 11:00-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgid "The background processing will be automatically terminated if there are n
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:103
-msgid "If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Start background area retrieval processing` action from the main Picard menu bar."
+msgid "If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Start background processing` action from the main Picard menu bar."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:107

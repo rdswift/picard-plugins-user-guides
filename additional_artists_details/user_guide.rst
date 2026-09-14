@@ -100,7 +100,7 @@ The plugin attempts to address this by periodically reviewing the cache database
 
 The background processing will be automatically terminated if there are no missing parent area records, or if there was an unrecoverable error encounted such as too many retries due to the API being unavailable. Errors causing the processing to be terminated are logged.
 
-If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Start background area retrieval processing` action from the main Picard menu bar.
+If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Start background processing` action from the main Picard menu bar.
 
 
 Variables Created
