@@ -91,6 +91,10 @@ There is also a :guilabel:`Status` button which shows information about the curr
 
 This displays the number of artist and area records currently stored in the session cache and the cache database file. It also indicates if there are any missing area parent records, and how many, and whether the missing area background processing is currently active.
 
+.. note::
+
+   When items are added, updated or removed from the persistent cache database, the database file may expand due to the items processed. This may lead to the database file using more disk space than necessary. To remove the unused space and compact the database, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Compact the database` action from the main Picard menu bar.
+
 Cache Background Processing
 ++++++++++++++++++++++++++++
 
