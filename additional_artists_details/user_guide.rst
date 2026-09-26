@@ -20,9 +20,9 @@ The plugin maintains a cache of artist and area information retrieved from Music
 
 There is a persistent cache system that utilizes a sqlite file to retain the information from the cache for use in subsequent Picard sessions.
 
-Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file.
+Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file if it is enabled.
 
-When artist and area information is retrieved from MusicBrainz, the persistent cache file is updated automatically with any new items, and the items are added to the session working cache.
+When artist and area information is retrieved from MusicBrainz, if the persistent cache system is enabled the database is updated automatically with any new items. Otherwise the items are added to the session working cache.
 
 Option Settings
 ----------------
@@ -60,28 +60,25 @@ While area information is almost always static and does not change, artist infor
 
    If use of the persistent cache system is disabled, no information will be written to, or read from, the persistent cache file.
 
-.. image:: cache_editor.png
-   :alt: Additional Artists Details Cache Editor
+Cache Background Processing
+++++++++++++++++++++++++++++
+
+Occasionally, area information is not retrieved from MusicBrainz as part of the normal album retrieval. This is typically the result of the MusicBrainz API being overloaded (usually by AI scrapers). Missing area information can result in incomplete area information in tags generated for an artist.
+
+The plugin attempts to address this by periodically reviewing the cache database to identify any missing parent areas, and generating requests for the information from the MusicBrainz API in the background. This functionality is enabled by default (strongly recommended), however there is an option to disable it. You can also set the number of seconds to wait (from 20 to 600 seconds) between sending area requests to the API.
+
+Plugin Tools Menu
++++++++++++++++++
+
+The :menuselection:`Plugin Tools --> Additional Artists Details` section of the main Picard menu bar provides some actions related to the plugin and its cache management.
+
+.. image:: plugin_menu.png
+   :alt: Additional Artists Details Cache Status
    :align: center
 
 |
 
-The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the cache database file by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter.
-
-Because the area information causes numerous additional calls to the API resulting in significant delays, and because the information rarely changes, the area information items cannot be removed from the cache with the cache editor.
-
-The persistent cache action buttons include:
-
-- :guilabel:`Import` - Import items from a user-specified cache file into the cache. This can import backup files in CSV format saved using the Export function, or JSON format files saved using the Export function from prior versions of the plugin.
-- :guilabel:`Export` - Export the items from the current cache database to a user-specified file in CSV format. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others.
-- :guilabel:`Edit` - Open the cache editor dialog. This allows you to review, and optionally remove, the artist records from the cache so that they are refreshed the next time they are included on an album retrieved from MusicBrainz.
-- :guilabel:`Delete` - Remove the cache database file from your system. This button is disabled if there is no existing cache database file, or if the option to use the persistent cache system is enabled.
-
-.. caution::
-
-   When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :guilabel:`Export` action.
-
-There is also a :guilabel:`Status` button which shows information about the current session cache as well as the cache database.
+:menuselection:`Display the cache status` - Show information about the current session cache as well as the cache database.
 
 .. image:: cache_status.png
    :alt: Additional Artists Details Cache Status
@@ -91,20 +88,27 @@ There is also a :guilabel:`Status` button which shows information about the curr
 
 This displays the number of artist and area records currently stored in the session cache and the cache database file. It also indicates if there are any missing area parent records, and how many, and whether the missing area background processing is currently active.
 
+:menuselection:`Compact the cache database` - Compact the database file. When items are added, updated or removed from the persistent cache database, the database file may expand due to the items processed. This may lead to the database file using more disk space than necessary. To remove the unused space and compact the database, you can use this action.
+
+:menuselection:`Import cache data` - Import items from a user-specified cache file into the persistent cache database. This can import backup files in CSV format saved using the Export function, or JSON format files saved using the Export function from prior versions of the plugin.
+
+:menuselection:`Export cache data` - Export the items from the persistent cache database to a user-specified file in CSV format. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others.
+
 .. note::
 
-   When items are added, updated or removed from the persistent cache database, the database file may expand due to the items processed. This may lead to the database file using more disk space than necessary. To remove the unused space and compact the database, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Compact the database` action from the main Picard menu bar.
+   When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :menuselection:`Export cache data` action, even if there is artist information in the database file.
 
-Cache Background Processing
-++++++++++++++++++++++++++++
+:menuselection:`Edit cache data` - Open the cache editor dialog. This allows you to review, and optionally remove, the artist records from the cache so that they are refreshed the next time they are included on an album retrieved from MusicBrainz.
 
-Occasionally, area information is not retrieved from MusicBrainz as part of the normal album retrieval. This is typically the result of the MusicBrainz API being overloaded (usually by AI scrapers). Missing area information can result in incomplete area information in tags generated for an artist.
+.. image:: cache_editor.png
+   :alt: Additional Artists Details Cache Editor
+   :align: center
 
-The plugin attempts to address this by periodically reviewing the cache database to identify any missing parent areas, and generating requests for the information from the MusicBrainz API in the background. This functionality is enabled by default (strongly recommended), however there is an option to disable it. You can also set the number of seconds to wait (from 20 to 600 seconds) between sending area requests to the API.
+|
 
-The background processing will be automatically terminated if there are no missing parent area records, or if there was an unrecoverable error encounted such as too many retries due to the API being unavailable. Errors causing the processing to be terminated are logged.
+The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the cache database file by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter.
 
-If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Start background processing` action from the main Picard menu bar.
+Because the area information causes numerous additional calls to the API resulting in significant delays, and because the information rarely changes, the area information items cannot be removed from the cache with the cache editor.
 
 
 Variables Created
