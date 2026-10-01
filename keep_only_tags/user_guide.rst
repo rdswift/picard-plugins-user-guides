@@ -14,11 +14,11 @@ This plugin provides a different approach for the user to determine which tags a
 What it Does
 ----------------
 
-This plugin reads the album and track metadata provided to Picard and converts any tags not found in the user's "keep" list into hidden variables by adding "``_ko_``" to the start of the tag name. The hidden variabled will not be written to the output file.
+This plugin reads the album and track metadata provided to Picard from MusicBrainz and converts any tags not found in the user's "keep" list into hidden variables by adding "\_ko\_" to the start of the tag name. These hidden variables will not be written to the output file, but can be used in scripts. Tags specified in the preserved tags list in the Tags options page will also be kept, as well as the tags ``title``, ``album``, ``artist``, ``albumartist``, ``discnumber``, ``totaldiscs``, ``tracknumber`` and ``totaltracks``.
 
 .. note::
 
-   This plugin is configured to run before all other plugins, so that it is working with the standard set of tags provided by MusicBrainz.
+   This plugin is configured to run before all other plugins, so that it is working with the initial set of tags provided by MusicBrainz.
 
 
 Option Settings
@@ -31,12 +31,14 @@ The settings panel allows the user to provide a list of the tags to keep.
    :align: center
 
 |
-| Tags that you wish to keep are entered in the options settings, with each tag on a separate line. Blank lines will be ignored. The entries are not case-sensitive.
+| There is an option to enable verbose logging, which will log the tags that are being removed and replaced with hidden variables. This is useful for troubleshooting and verifying that the plugin is working as expected. Enabling this option will generate a lot of log messages, so it is recommended that this option be disabled once the user has verified their setup and list of tags to keep.
 
-If a tag in the list ends with an asterisk (``*``), then it will keep any tags beginning with the tag. For example, if your list contains "``performer:\*``" then all tags beginning with "``performer:``" will be kept, such as "``performer:instrument``" and "``performer:vocals``".
+Tags that you wish to keep are entered in the options settings, with each tag on a separate line. Blank lines will be ignored. The entries are not case-sensitive.
 
-All tags that are removed will still be available as variables with "``_ko_``" prepended to the tag name. For example, if you choose not to keep the
-"``musicbrainz_trackid``" tag, it will still be available to scripts as "``%_ko_musicbrainz_trackid%``".
+If a tag in the list ends with an asterisk (*), then it will keep any tags beginning with the tag. For example, if your list contains "performer*" then all tags beginning with "performer" will be kept, such as ``performer:instrument`` and ``performer:vocals``.
+
+All tags that are removed will still be available as variables with "\_ko\_" prepended to the tag name. For example, if you choose not to keep the
+``musicbrainz_trackid`` tag, it will still be available to scripts as ``%_ko_musicbrainz_trackid%``.
 
 
 Examples
