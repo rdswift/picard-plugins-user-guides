@@ -6,7 +6,7 @@ Overview
 
 This plugin allows the user to generate a playlist from selected albums in Picard. The output is written to a ``*.m3u8`` file with UTF-8 encoded text.
 
-This plugin is based on the Picard 2 plugin "Generate M3U playlist" by Francis Chin, Sambhav Kothari and Chris Hylen. See https://github.com/metabrainz/picard-plugins/blob/5a63f009/plugins/playlist/playlist.py for the original Picard 2 plugin code.
+This plugin is based on the Picard 2 plugin "Generate M3U playlist" by Francis Chin, Sambhav Kothari and Chris Hylen. The original Picard 2 plugin code is available on GitHub at "`Generate M3U playlist <https://github.com/metabrainz/picard-plugins/blob/2.0/plugins/playlist/playlist.py>`_".
 
 
 What it Does
