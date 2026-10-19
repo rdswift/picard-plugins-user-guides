@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.09.21\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.10.19\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-21 12:44-0600\n"
+"POT-Creation-Date: 2026-10-19 15:44-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,305 +49,554 @@ msgid "There is a persistent cache system that utilizes a sqlite file to retain 
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:23
-msgid "Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file."
+msgid "Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file if it is enabled."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:25
-msgid "When artist and area information is retrieved from MusicBrainz, the persistent cache file is updated automatically with any new items, and the items are added to the session working cache."
+msgid "When artist and area information is retrieved from MusicBrainz, if the persistent cache system is enabled the database is updated automatically with any new items. Otherwise the items are added to the session working cache."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:28
+#: ../../additional_artists_details/user_guide.rst:29
 msgid "Option Settings"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:30
+#: ../../additional_artists_details/user_guide.rst:31
 msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track artists and detail included in the artist location variables' content."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:32
+#: ../../additional_artists_details/user_guide.rst:33
 msgid "Additional Artists Details Option Settings"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:39
-msgid "Track processing"
+#: ../../additional_artists_details/user_guide.rst:40
+msgid "Process Track Artists"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:41
+#: ../../additional_artists_details/user_guide.rst:42
 msgid "This option determines whether or not details are retrieved for all track artists on the release. If you are only interested in details for the album artists then this should be disabled, thus significantly reducing the number of additional calls made to the MusicBrainz API and reducing the time required to load a release. Album artists are always processed."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:44
-msgid "Details to include"
+#: ../../additional_artists_details/user_guide.rst:45
+msgid "Include Area Details"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:46
+#: ../../additional_artists_details/user_guide.rst:47
 msgid "These options determine whether or not County, Municipality and Subdivision information is included in the artist location variables created. Regardless of these settings, this information will be included if a County, Municipality or Subdivision is the area specified for an artist."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:49
-msgid "Persistent cache"
+#: ../../additional_artists_details/user_guide.rst:50
+msgid "Persistent Cache"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:51
+#: ../../additional_artists_details/user_guide.rst:52
 msgid "There is an option to determine whether the persistent cache system is used. It is **strongly** recommended that this be enabled."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:53
+#: ../../additional_artists_details/user_guide.rst:54
 msgid "All area records, and optionally artist records, are stored to a persistent cache sqlite database file as they are retrieved from the MusicBrainz API. This is to allow the information to be used in subsequent Picard sessions without having to repeat the API calls. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:55
+#: ../../additional_artists_details/user_guide.rst:56
 msgid "Area information is always stored in the persistent cache file, because area lookups produce the largest amount of API calls that impact album loading time. Artist information storage in the persistent cache file is optional, but recommended."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:57
-msgid "While area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain any updated information that has changed since the artist record was stored. There are two ways to address this. One way is to disable including the artists in the persistent cache file, and the other way is to remove one or more selected artists from the current working cache using the cache editor. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album."
+#: ../../additional_artists_details/user_guide.rst:58
+msgid "While area information is almost always static and does not change, artist information occasionally changes things like location, begin or end dates, or disambiguation. If artist information is retained in the persistent cache file, the variables created will not contain any updated information that has changed since the artist record was stored. There are two ways to address this. One way is to disable including the artists in the persistent cache file, and the other way is to remove one or more selected artists from the current working cache. Artist records can be removed using the cache editor, or automatically by specifying the number of days to keep an artist record and letting the system remove any records that haven't been refreshed within that period. Removing specific artists will trigger refreshing only those artists the next time they are encountered on an album."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:61
+#: ../../additional_artists_details/user_guide.rst:62
 msgid "If use of the persistent cache system is disabled, no information will be written to, or read from, the persistent cache file."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:63
-msgid "Additional Artists Details Cache Editor"
+#: ../../additional_artists_details/user_guide.rst:65
+msgid "Cache Background Processing"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:67
+msgid "Occasionally, area information is not retrieved from MusicBrainz as part of the normal album retrieval. This is typically the result of the MusicBrainz API being overloaded (usually by AI scrapers). Missing area information can result in incomplete area information in tags generated for an artist."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:69
-msgid "The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the cache database file by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter."
+msgid "The plugin attempts to address this by periodically reviewing the cache database to identify any missing parent areas, and generating requests for the information from the MusicBrainz API in the background. This functionality is enabled by default (strongly recommended), however there is an option to disable it. You can also set the number of seconds to wait (from 20 to 600 seconds) between sending area requests to the API."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:71
-msgid "Because the area information causes numerous additional calls to the API resulting in significant delays, and because the information rarely changes, the area information items cannot be removed from the cache with the cache editor."
+msgid "If the option to remove expired artist records is enabled, a check will be performed once per day to determine whether there are any expired artist records to remove and remove them from the cache database automatically."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:73
-msgid "The persistent cache action buttons include:"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:75
-msgid ":guilabel:`Import` - Import items from a user-specified cache file into the cache. This can import backup files in CSV format saved using the Export function, or JSON format files saved using the Export function from prior versions of the plugin."
+#: ../../additional_artists_details/user_guide.rst:74
+msgid "Plugin Tools Menu"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:76
-msgid ":guilabel:`Export` - Export the items from the current cache database to a user-specified file in CSV format. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others."
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:77
-msgid ":guilabel:`Edit` - Open the cache editor dialog. This allows you to review, and optionally remove, the artist records from the cache so that they are refreshed the next time they are included on an album retrieved from MusicBrainz."
+msgid "The :menuselection:`Plugin Tools --> Additional Artists Details` section of the main Picard menu bar provides some actions related to the plugin and its cache management."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:78
-msgid ":guilabel:`Delete` - Remove the cache database file from your system. This button is disabled if there is no existing cache database file, or if the option to use the persistent cache system is enabled."
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:82
-msgid "When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :guilabel:`Export` action."
+#: ../../additional_artists_details/user_guide.rst:86
+msgid "Additional Artists Details Cache Status"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:84
-msgid "There is also a :guilabel:`Status` button which shows information about the current session cache as well as the cache database."
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:86
-msgid "Additional Artists Details Cache Status"
+msgid ":menuselection:`Display the cache status` - Show information about the current session cache as well as the cache database."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:92
 msgid "This displays the number of artist and area records currently stored in the session cache and the cache database file. It also indicates if there are any missing area parent records, and how many, and whether the missing area background processing is currently active."
 msgstr ""
 
+#: ../../additional_artists_details/user_guide.rst:94
+msgid ":menuselection:`Compact the cache database` - Compact the database file. When items are added, updated or removed from the persistent cache database, the database file may expand due to the items processed. This may lead to the database file using more disk space than necessary. To remove the unused space and compact the database, you can use this action."
+msgstr ""
+
 #: ../../additional_artists_details/user_guide.rst:96
-msgid "When items are added, updated or removed from the persistent cache database, the database file may expand due to the items processed. This may lead to the database file using more disk space than necessary. To remove the unused space and compact the database, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Compact the database` action from the main Picard menu bar."
+msgid ":menuselection:`Import cache data` - Import items from a user-specified cache file into the persistent cache database. This can import backup files in CSV format saved using the Export function, or JSON format files saved using the Export function from prior versions of the plugin."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:99
-msgid "Cache Background Processing"
+#: ../../additional_artists_details/user_guide.rst:98
+msgid ":menuselection:`Export cache data` - Export the items from the persistent cache database to a user-specified file in CSV format. This can be used to generate a copy of the cache for backup purposes, for transferring to a different system, or for sharing with others."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:101
-msgid "Occasionally, area information is not retrieved from MusicBrainz as part of the normal album retrieval. This is typically the result of the MusicBrainz API being overloaded (usually by AI scrapers). Missing area information can result in incomplete area information in tags generated for an artist."
+#: ../../additional_artists_details/user_guide.rst:102
+msgid "When the option to include artists when saving to the cache file is disabled, the artist information will **not** be written when using the :menuselection:`Export cache data` action, even if there is artist information in the database file."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:103
-msgid "The plugin attempts to address this by periodically reviewing the cache database to identify any missing parent areas, and generating requests for the information from the MusicBrainz API in the background. This functionality is enabled by default (strongly recommended), however there is an option to disable it. You can also set the number of seconds to wait (from 20 to 600 seconds) between sending area requests to the API."
+#: ../../additional_artists_details/user_guide.rst:104
+msgid ":menuselection:`Edit cache data` - Open the cache editor dialog. This allows you to review, and optionally remove, the artist records from the cache so that they are refreshed the next time they are included on an album retrieved from MusicBrainz."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:105
-msgid "The background processing will be automatically terminated if there are no missing parent area records, or if there was an unrecoverable error encounted such as too many retries due to the API being unavailable. Errors causing the processing to be terminated are logged."
+#: ../../additional_artists_details/user_guide.rst:106
+msgid "Additional Artists Details Cache Editor"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:107
-msgid "If the background processing has been terminated, and you wish to restart it, you can use the :menuselection:`Plugin Tools --> Additional Artists Details --> Start background processing` action from the main Picard menu bar."
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:111
-msgid "Variables Created"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:113
-msgid "**\\_artist_\\{artist_id\\}_begin** - The begin date (birth date) of the artist"
+#: ../../additional_artists_details/user_guide.rst:112
+msgid "The cache editor displays a list of the artists currently contained in the cache. It allows you to remove one or more artists from the cache database file by selecting them from the list and clicking the :guilabel:`Remove` button. There is a check box to quickly select or deselect all artists, and an option to highlight and quickly move between artists using a filter."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:114
-msgid "**\\_artist_\\{artist_id\\}_begin_country** - The begin two-character country code of the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:115
-msgid "**\\_artist_\\{artist_id\\}_begin_location** - The begin location of the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:116
-msgid "**\\_artist_\\{artist_id\\}_country** - The two-character country code for the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:117
-msgid "**\\_artist_\\{artist_id\\}_disambiguation** - The disambiguation information for the artist"
+msgid "Because the area information causes numerous additional calls to the API resulting in significant delays, and because the information rarely changes, the area information items cannot be removed from the cache with the cache editor."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:118
-msgid "**\\_artist_\\{artist_id\\}_end** - The end date (death date) of the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:119
-msgid "**\\_artist_\\{artist_id\\}_end_country** - The end two-character country code of the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:120
-msgid "**\\_artist_\\{artist_id\\}_end_location** - The end location of the artist"
+msgid "Variables Created"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:121
-msgid "**\\_artist_\\{artist_id\\}_gender** - The gender of the artist"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:122
-msgid "**\\_artist_\\{artist_id\\}_name** - The name of the artist"
+#: ../../additional_artists_details/user_guide.rst:190
+msgid "Artist-specific variables"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:123
-msgid "**\\_artist_\\{artist_id\\}_sort_name** - The sort name of the artist"
+msgid "Variables specific to the individual artists will be created using the artist MBID as part of the variable name. These artist-specific variables include:"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:124
-msgid "**\\_artist_\\{artist_id\\}_type** - The type of artist (person, group, etc.)"
+#: ../../additional_artists_details/user_guide.rst:125
+msgid "**\\_artist_\\{artist_id\\}_begin** - The begin date (birth date) of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:126
+msgid "**\\_artist_\\{artist_id\\}_begin_country** - The begin two-character country code of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:127
+msgid "**\\_artist_\\{artist_id\\}_begin_location** - The begin location of the artist"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:128
-msgid "A variable will only be created if the information is returned from MusicBrainz. For example, if a gender has not been specified in the MusicBrainz data then the **%\\_artist_\\{artist_id\\}_gender%** variable will not be created."
+msgid "**\\_artist_\\{artist_id\\}_country** - The two-character country code for the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:129
+msgid "**\\_artist_\\{artist_id\\}_disambiguation** - The disambiguation information for the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:130
+msgid "**\\_artist_\\{artist_id\\}_end** - The end date (death date) of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:131
+msgid "**\\_artist_\\{artist_id\\}_end_country** - The end two-character country code of the artist"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:132
-msgid "Examples"
+msgid "**\\_artist_\\{artist_id\\}_end_location** - The end location of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:133
+msgid "**\\_artist_\\{artist_id\\}_gender** - The gender of the artist"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:134
-msgid "If you load the release **Wrecking Ball** (release `8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_) by Sarah Blackwood (artist `af7e5ea9-bd58-4346-8f78-d672e9f297f7 <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_), Jenni Pleau (artist `07fa21a9-c253-4ed0-b711-d63f7965b723 <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_) & Emily Bones (artist `541d331c-f041-4895-b8f2-7db9e27dc5ab <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_), the following variables will be created:"
+msgid "**\\_artist_\\{artist_id\\}_name** - The name of the artist"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:135
+msgid "**\\_artist_\\{artist_id\\}_sort_name** - The sort name of the artist"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:136
-msgid "Sarah Blackwood (primary artist):"
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:138
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin** = \"1980-10-18\""
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:139
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_country** = \"CA\""
+msgid "**\\_artist_\\{artist_id\\}_type** - The type of artist (person, group, etc.)"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:140
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_location** = \"Burlington, Ontario, Canada\""
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:141
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_country** = \"CA\""
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:142
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_disambiguation** = \"rockabilly, + \"Somebody That I Used to Know\"\""
+msgid "A variable will only be created if the information is returned from MusicBrainz. For example, if a gender has not been specified in the MusicBrainz data then the **%\\_artist_\\{artist_id\\}_gender%** variable will not be created."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:143
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_gender** = \"Female\""
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:144
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_location** = \"Canada\""
+#: ../../additional_artists_details/user_guide.rst:224
+msgid "Convenience variables"
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:145
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_name** = \"Sarah Blackwood\""
+msgid "In addition to the artist-specific variables, the following convenience variables will be created to provide easy access to the information. These are all multi-value variables containing the information for the album and track artists."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:146
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_sort_name** = \"Blackwood, Sarah\""
+#: ../../additional_artists_details/user_guide.rst:148
+#: ../../additional_artists_details/user_guide.rst:227
+msgid "Album artists variables"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:147
-msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_type** = \"Person\""
-msgstr ""
-
-#: ../../additional_artists_details/user_guide.rst:149
-msgid "Jenny Pleau (additional artist)"
+#: ../../additional_artists_details/user_guide.rst:150
+msgid "**\\_aad\\_albumartists\\_names** - The names of the album artists."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:151
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_country** = \"CA\""
+msgid "**\\_aad\\_albumartists\\_sort\\_names** - The sort names of the album artists."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:152
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_gender** = \"Female\""
+msgid "**\\_aad\\_albumartists\\_types** - The types of the album artists, such as 'person' or 'group'."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:153
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_location** = \"Kitchener, Ontario, Canada\""
+msgid "**\\_aad\\_albumartists\\_genders** - The genders of the album artists."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:154
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_name** = \"Jenni Pleau\""
+msgid "**\\_aad\\_albumartists\\_begin\\_dates** - The dates when the album artists began, typically the birth date of a person or the formation date of a group."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:155
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_sort_name** = \"Pleau, Jenni\""
+msgid "**\\_aad\\_albumartists\\_begin\\_locations** - The locations where the album artists began, typically the birth place of a person or the formation place of a group."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:156
-msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_type** = \"Person\""
+msgid "**\\_aad\\_albumartists\\_begin\\_countries** - The countries where the album artists began, typically the birth country of a person or the formation country of a group."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:157
+msgid "**\\_aad\\_albumartists\\_end\\_dates** - The dates when the album artists ended, typically the death date of a person or the disbanding date of a group."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:158
-msgid "Emily Bones (additional artist)"
+msgid "**\\_aad\\_albumartists\\_end\\_locations** - The locations where the album artists ended, typically the death place of a person or the disbanding place of a group."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:159
+msgid "**\\_aad\\_albumartists\\_end\\_countries** - The countries where the album artists ended, typically the death country of a person or the disbanding country of a group."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:160
-msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_gender** = \"Female\""
+msgid "**\\_aad\\_albumartists\\_locations** - The current home locations of the album artists."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:161
-msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_name** = \"Emily Bones\""
+msgid "**\\_aad\\_albumartists\\_countries** - The countries where the album artists are based."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:162
-msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_sort_name** = \"Bones, Emily\""
+msgid "**\\_aad\\_albumartists\\_disambiguations** - The disambiguation comments for the album artists, if any."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:163
-msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_type** = \"Person\""
+msgid "**\\_aad\\_albumartists\\_websites** - The websites of the album artists, if any."
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:165
-msgid "Note that variables will only be created for information that exists for the artist's record."
+#: ../../additional_artists_details/user_guide.rst:166
+#: ../../additional_artists_details/user_guide.rst:245
+msgid "Track artist variables"
 msgstr ""
 
-#: ../../additional_artists_details/user_guide.rst:167
-msgid "This could be used to set a **%country%** tag to the country code of the (primary) album artist with a tagging script like:"
+#: ../../additional_artists_details/user_guide.rst:168
+msgid "**\\_aad\\_artists\\_names** - The names of the track artists. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:169
+msgid "**\\_aad\\_artists\\_sort\\_names** - The sort names of the track artists. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:170
+msgid "**\\_aad\\_artists\\_types** - The types of the track artists, such as 'person' or 'group'. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:171
+msgid "**\\_aad\\_artists\\_genders** - The genders of the track artists. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:172
+msgid "**\\_aad\\_artists\\_begin\\_dates** - The dates when the track artists began, typically the birth date of a person or the formation date of a group. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:173
+msgid "**\\_aad\\_artists\\_begin\\_locations** - The locations where the track artists began, typically the birth place of a person or the formation place of a group. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:174
+msgid "**\\_aad\\_artists\\_begin\\_countries** - The countries where the track artists began, typically the birth country of a person or the formation country of a group. Only available if the option to process track artists is enabled."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:175
-msgid "Source Code"
+msgid "**\\_aad\\_artists\\_end\\_dates** - The dates when the track artists ended, typically the death date of a person or the disbanding date of a group. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:176
+msgid "**\\_aad\\_artists\\_end\\_locations** - The locations where the track artists ended, typically the death place of a person or the disbanding place of a group. Only available if the option to process track artists is enabled."
 msgstr ""
 
 #: ../../additional_artists_details/user_guide.rst:177
+msgid "**\\_aad\\_artists\\_end\\_countries** - The countries where the track artists ended, typically the death country of a person or the disbanding country of a group. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:178
+msgid "**\\_aad\\_artists\\_locations** - The current home locations of the track artists. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:179
+msgid "**\\_aad\\_artists\\_countries** - The countries where the track artists are based. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:180
+msgid "**\\_aad\\_artists\\_disambiguations** - The disambiguation comments for the track artists, if any. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:181
+msgid "**\\_aad\\_artists\\_websites** - The websites of the track artists, if any. Only available if the option to process track artists is enabled."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:185
+msgid "Examples"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:187
+msgid "If you load the release **Wrecking Ball** (release `8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_) by Sarah Blackwood (artist `af7e5ea9-bd58-4346-8f78-d672e9f297f7 <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_), Jenni Pleau (artist `07fa21a9-c253-4ed0-b711-d63f7965b723 <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_) & Emily Bones (artist `541d331c-f041-4895-b8f2-7db9e27dc5ab <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_), the following variables will be created:"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:192
+msgid "Sarah Blackwood (primary artist):"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:194
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin** = '1980-10-18'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:195
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_country** = 'CA'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:196
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_begin_location** = 'Burlington, Ontario, Canada'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:197
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_country** = \"CA\""
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:198
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_disambiguation** = 'rockabilly, + \"Somebody That I Used to Know\"'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:199
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_gender** = 'Female'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:200
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_location** = 'Canada'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:201
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_name** = 'Sarah Blackwood'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:202
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_sort_name** = 'Blackwood, Sarah'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:203
+msgid "**\\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_type** = 'Person'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:205
+msgid "Jenny Pleau (additional artist)"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:207
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_country** = 'CA'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:208
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_gender** = 'Female'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:209
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_location** = 'Kitchener, Ontario, Canada'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:210
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_name** = 'Jenni Pleau'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:211
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_sort_name** = 'Pleau, Jenni'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:212
+msgid "**\\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_type** = 'Person'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:214
+msgid "Emily Bones (additional artist)"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:216
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_gender** = 'Female'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:217
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_name** = 'Emily Bones'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:218
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_sort_name** = 'Bones, Emily'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:219
+msgid "**\\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_type** = 'Person'"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:221
+msgid "Note that variables will only be created for information that exists for the artist's record."
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:229
+msgid "**\\_aad\\_albumartists\\_begin\\_countries** = \\['CA', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:230
+msgid "**\\_aad\\_albumartists\\_begin\\_dates** = \\['1980-10-18', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:231
+msgid "**\\_aad\\_albumartists\\_begin\\_locations** = \\['Burlington, Regional Municipality of Halton, Ontario, Canada', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:232
+msgid "**\\_aad\\_albumartists\\_countries** = \\['CA', 'CA', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:233
+msgid "**\\_aad\\_albumartists\\_disambiguations** = \\['rockabilly, + \"Somebody That I Used to Know\"', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:234
+msgid "**\\_aad\\_albumartists\\_end\\_countries** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:235
+msgid "**\\_aad\\_albumartists\\_end\\_dates** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:236
+msgid "**\\_aad\\_albumartists\\_end\\_locations** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:237
+msgid "**\\_aad\\_albumartists\\_genders** = \\['Female', 'Female', 'Female']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:238
+msgid "**\\_aad\\_albumartists\\_locations** = \\['Canada', 'Kitchener, Regional Municipality of Waterloo, Ontario, Canada', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:239
+msgid "**\\_aad\\_albumartists\\_names** = \\['Sarah Blackwood', 'Jenni Pleau', 'Emily Bones']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:240
+msgid "**\\_aad\\_albumartists\\_sort\\_names** = \\['Blackwood, Sarah', 'Pleau, Jenni', 'Bones, Emily']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:241
+msgid "**\\_aad\\_albumartists\\_types** = \\['Person', 'Person', 'Person']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:242
+msgid "**\\_aad\\_albumartists\\_websites** = \\['http://www.sarahblackwoodmusic.com/', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:247
+msgid "**\\_aad\\_artists\\_begin\\_countries** = \\['CA', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:248
+msgid "**\\_aad\\_artists\\_begin\\_dates** = \\['1980-10-18', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:249
+msgid "**\\_aad\\_artists\\_begin\\_locations** = \\['Burlington, Regional Municipality of Halton, Ontario, Canada', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:250
+msgid "**\\_aad\\_artists\\_countries** = \\['CA', 'CA', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:251
+msgid "**\\_aad\\_artists\\_disambiguations** = \\['rockabilly, + \"Somebody That I Used to Know\"', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:252
+msgid "**\\_aad\\_artists\\_end\\_countries** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:253
+msgid "**\\_aad\\_artists\\_end\\_dates** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:254
+msgid "**\\_aad\\_artists\\_end\\_locations** = \\['', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:255
+msgid "**\\_aad\\_artists\\_genders** = \\['Female', 'Female', 'Female']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:256
+msgid "**\\_aad\\_artists\\_locations** = \\['Canada', 'Kitchener, Regional Municipality of Waterloo, Ontario, Canada', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:257
+msgid "**\\_aad\\_artists\\_names** = \\['Sarah Blackwood', 'Jenni Pleau', 'Emily Bones']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:258
+msgid "**\\_aad\\_artists\\_sort\\_names** = \\['Blackwood, Sarah', 'Pleau, Jenni', 'Bones, Emily']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:259
+msgid "**\\_aad\\_artists\\_types** = \\['Person', 'Person', 'Person']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:260
+msgid "**\\_aad\\_artists\\_websites** = \\['http://www.sarahblackwoodmusic.com/', '', '']"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:262
+msgid "These could be used to set a **%country%** tag to the country code of the (primary) album artist with a tagging script like:"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:269
+msgid "Source Code"
+msgstr ""
+
+#: ../../additional_artists_details/user_guide.rst:271
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-additional-artists-details>`_."
 msgstr ""

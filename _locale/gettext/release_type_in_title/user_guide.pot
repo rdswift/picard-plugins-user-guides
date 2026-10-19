@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2026.10.19\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 15:44-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../release_type_in_title/user_guide.rst:2
+msgid "Release Type in Title"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:7
+msgid "This plugin automatically places selected release type information in the title of the release."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:9
+msgid "The plugin is based on the Picard 2 plugin \"Release Type\" by Elliot Chance. The original Picard 2 plugin code is available on GitHub at \"`Release Type <https://github.com/metabrainz/picard-plugins/blob/2.0/plugins/release_type/release_type.py>`_\"."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:13
+msgid "What it Does"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:15
+msgid "The plugin checks the existing release title to determine whether the release type already appears in the title. If not, and the release type is one of those selected for inclusion, the release type text is appended to the release title."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:17
+msgid "The release types to include, the keywords to check, and the text to add are defined by the user in the plugin's option settings."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:21
+msgid "Option Settings"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:23
+msgid "The settings panel allows the user to provide a list of the tags to keep."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:25
+msgid "Default Settings Page"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:30
+msgid "Each of the available release types that can be appended to the release title can be enabled individually. These include ep, single, soundtrack, live, remix and demo. For each type, you can set the text that will be appended to the title, as well as the list of keywords to check to determine whether the type needs to be appended."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:32
+msgid "If the append string already appears in the title, or if a word from the keywords list appears in the title, then the title will not be changed. Note that all comparisons are performed on a case-insensitive basis."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:34
+msgid "The type string will only be appended if the type is the primary album type, or one of the secondary album types for the release."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:38
+msgid "Examples"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:40
+msgid "With the default plugin setting, when the release `Wrecking Ball <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_ by Sarah Blackwood is loaded from MusicBrainz, the release title is automatically changed to \"Wrecking Ball (Single)\" because the primary release type is ``single``."
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:44
+msgid "Source Code"
+msgstr ""
+
+#: ../../release_type_in_title/user_guide.rst:46
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-release-type-in-title>`_."
+msgstr ""

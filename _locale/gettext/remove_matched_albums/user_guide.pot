@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2026.10.19\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-19 15:44-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../remove_matched_albums/user_guide.rst:2
+msgid "Remove Matched Albums"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:7
+msgid "This plugin allows the user to remove completely matched and saved albums from the album pane."
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:9
+msgid "The plugin is based on the Picard v2 \"Remove Perfect Albums\" plugin by ichneumon and hrglgrmpf. The original Picard 2 plugin code is available on GitHub at \"`Remove Perfect Albums <https://github.com/metabrainz/picard-plugins/blob/2.0/plugins/remove_perfect_albums/remove_perfect_albums.py>`_\"."
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:13
+msgid "What it Does"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:15
+msgid "This plugin provides an action under Picard's main menu. When :menuselection:`Plugin Tools --> Remove matched albums` is clicked, each of the albums listed in the Albums pane is examined for possible removal. If the album is complete with all tracks matched to an audio file and all of the files have been saved, then the album is removed from the list."
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:19
+msgid "Option Settings"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:21
+msgid "There are no option settings for this plugin."
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:25
+msgid "Examples"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:27
+msgid "There are no examples."
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:31
+msgid "Source Code"
+msgstr ""
+
+#: ../../remove_matched_albums/user_guide.rst:33
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-remove-matched-albums>`_."
+msgstr ""

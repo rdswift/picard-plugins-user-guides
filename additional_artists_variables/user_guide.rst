@@ -26,7 +26,15 @@ The "alias" variables are populated if the ``Translate names when available: Art
 Option Settings
 ----------------
 
-The plugin has no option settings.
+The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to the replacement text used for missing artist information.
+
+.. image:: option_settings.png
+   :alt: Additional Artists Variables Option Settings
+   :align: center
+
+|
+
+These settings will determine the text to use for missing artist information in the ``*_legal_multi``, ``*_alias_multi`` and ``*_alias_sort_multi`` multi-value variables. You can use either the standarized name as the replacement, or specify the text to use. The default text is "n/a", but can be changed to a different value (including an empty string) as required.
 
 
 Variables Created

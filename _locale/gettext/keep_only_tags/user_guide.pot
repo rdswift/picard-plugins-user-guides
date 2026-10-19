@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.01.03\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.10.19\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 05:45-0700\n"
+"POT-Creation-Date: 2026-10-19 15:44-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,11 +37,11 @@ msgid "What it Does"
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:17
-msgid "This plugin reads the album and track metadata provided to Picard and converts any tags not found in the user's \"keep\" list into hidden variables by adding \"``_ko_``\" to the start of the tag name. The hidden variabled will not be written to the output file."
+msgid "This plugin reads the album and track metadata provided to Picard from MusicBrainz and converts any tags not found in the user's \"keep\" list into hidden variables by adding \"\\_ko\\_\" to the start of the tag name. These hidden variables will not be written to the output file, but can be used in scripts. Tags specified in the preserved tags list in the Tags options page will also be kept, as well as the tags ``title``, ``album``, ``artist``, ``albumartist``, ``discnumber``, ``totaldiscs``, ``tracknumber`` and ``totaltracks``."
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:21
-msgid "This plugin is configured to run before all other plugins, so that it is working with the standard set of tags provided by MusicBrainz."
+msgid "This plugin is configured to run before all other plugins, so that it is working with the initial set of tags provided by MusicBrainz."
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:25
@@ -57,29 +57,33 @@ msgid "Default Settings Page"
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:34
-msgid "Tags that you wish to keep are entered in the options settings, with each tag on a separate line. Blank lines will be ignored. The entries are not case-sensitive."
+msgid "There is an option to enable verbose logging, which will log the tags that are being removed and replaced with hidden variables. This is useful for troubleshooting and verifying that the plugin is working as expected. Enabling this option will generate a lot of log messages, so it is recommended that this option be disabled once the user has verified their setup and list of tags to keep."
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:36
-msgid "If a tag in the list ends with an asterisk (``*``), then it will keep any tags beginning with the tag. For example, if your list contains \"``performer:\\*``\" then all tags beginning with \"``performer:``\" will be kept, such as \"``performer:instrument``\" and \"``performer:vocals``\"."
+msgid "Tags that you wish to keep are entered in the options settings, with each tag on a separate line. Blank lines will be ignored. The entries are not case-sensitive."
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:38
-msgid "All tags that are removed will still be available as variables with \"``_ko_``\" prepended to the tag name. For example, if you choose not to keep the \"``musicbrainz_trackid``\" tag, it will still be available to scripts as \"``%_ko_musicbrainz_trackid%``\"."
+msgid "If a tag in the list ends with an asterisk (*), then it will keep any tags beginning with the tag. For example, if your list contains \"performer*\" then all tags beginning with \"performer\" will be kept, such as ``performer:instrument`` and ``performer:vocals``."
 msgstr ""
 
-#: ../../keep_only_tags/user_guide.rst:43
-msgid "Examples"
+#: ../../keep_only_tags/user_guide.rst:40
+msgid "All tags that are removed will still be available as variables with \"\\_ko\\_\" prepended to the tag name. For example, if you choose not to keep the ``musicbrainz_trackid`` tag, it will still be available to scripts as ``%_ko_musicbrainz_trackid%``."
 msgstr ""
 
 #: ../../keep_only_tags/user_guide.rst:45
+msgid "Examples"
+msgstr ""
+
+#: ../../keep_only_tags/user_guide.rst:47
 msgid "There are no examples."
 msgstr ""
 
-#: ../../keep_only_tags/user_guide.rst:49
+#: ../../keep_only_tags/user_guide.rst:51
 msgid "Source Code"
 msgstr ""
 
-#: ../../keep_only_tags/user_guide.rst:51
+#: ../../keep_only_tags/user_guide.rst:53
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-keep-only-tags>`_."
 msgstr ""
