@@ -46,7 +46,7 @@ The settings panel allows the user to provide a list of the files allowed to be 
 
 Blank lines will be automatically removed, and the lists will be sorted automatically when the settings are saved.
 
-There is also a setting which allows the user to choose whether or not file writing is allowed. By default, file writing is diababled.
+There is also a setting which allows the user to choose whether or not file writing is allowed. By default, file writing is disabled.
 
 
 Examples
@@ -61,13 +61,13 @@ The following will write a text file containing a list of all the tracks on an a
 
    $set(_reset,$if($and($lt(%discnumber%,2),$lt(%tracknumber%,2)),1,))
    $set(_filename,%albumartist% - %album%)
-   $writeline(%_filename%,$if($gt(%totaldiscs%,1)$num(%discnumber%,2)-)$num(%tracknumber%,2) %title%,%_reset%)
+   $writeline(%_filename%,$if($gt(%totaldiscs%,1),$num(%discnumber%,2)-)$num(%tracknumber%,2) %title%,%_reset%)
 
 
 Example 2
 ++++++++++
 
-Similar to Example 1, the following will write a text file containing a list of all the tracks on an album.  The file name will be in the form "AlbumArtist - Album" and will be written in a separate Windows directory called ``C:\Albums``.
+Similar to Example 1, the following will write a text file containing a list of all the tracks on an album. The file name will be in the form "AlbumArtist - Album" and will be written in a separate Windows directory called ``C:\Albums``.
 
 .. code-block:: taggerscript
 

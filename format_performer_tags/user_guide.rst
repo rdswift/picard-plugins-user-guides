@@ -51,7 +51,7 @@ This plugin allows fine-tuned organization of how instruments, performers and ad
 
 Here is some background information about these keywords:
 
-MusicBrainz' database allows to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store, and offer Picard:
+MusicBrainz' database allows you to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store and offer to Picard:
 
 * additional
 * guest
@@ -89,10 +89,10 @@ Picard can retrieve and display these keywords and will list them all together i
    additional baritone vocals: Hermann Rorschach
    guest soprano vocals: Bianca Castafiore
 
-The problem with this is that it is a bit indistinct if these keywords say something about the instrument, the artist and their performing role, the voice's register, or the persons relation to the group/orchestra. For instance:
+The problem with this is that it is a bit indistinct if these keywords say something about the instrument, the artist and their performing role, the voice's register, or the person's relation to the group/orchestra. For instance:
 
 * 'additional' is referring to instrumentation. For example 'additional percussion'.
-* 'guest' is referring to the performer as a person. Indicating that they are a guest in that band/orchestra instead of a regular member.
+* 'guest' is referring to the performer as a person. This indicates that they are a guest in that band/orchestra instead of a regular member.
 * 'solo' is referring to a specific role a musician performs in a composition. For example a musician performing a guitar solo.
 * 'soprano vocals' is saying something about the register of a performer's voice.
 
@@ -101,8 +101,8 @@ So you might want to attach 'solo' to the instrument, 'baritone' to the vocals, 
 .. code-block:: none
 
    guitar [solo]: Bob 'Swift' Fingers
-   drums <additional> : Rob Reiner (guest)
-   vocals, baritone <additional> : Hermann Rorschach
+   drums <additional>: Rob Reiner (guest)
+   vocals, baritone <additional>: Hermann Rorschach
    vocals, soprano: Bianca Castafiore (guest)
 
 
@@ -125,7 +125,7 @@ This plugin makes four different 'Sections' at fixed positions in these tags ava
 
 In the settings panel you can define in what section (at what location) you want each of the available keywords to be displayed. You can do that by simply selecting the section number for that (group of) keyword(s).
 
-You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parenthesis brackets (), or maybe you prefer less common brackets such as [] or \<\>. Note that using default parenthesis might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc.
+You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parentheses (), or maybe you prefer less common brackets such as [] or \<\>. Note that using default parentheses might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc.
 
 .. note::
 

@@ -28,7 +28,7 @@ Examples
 
 The following examples have been graciously provided by **hiccup**:
 
-You will need to use a script to tag your files with the full language names that this plugins makes available. A basic script to e.g. populate the 'language' tag with the full language name of the work could be:
+You will need to use a script to tag your files with the full language names that this plugin makes available. A basic script to e.g. populate the 'language' tag with the full language name of the work could be:
 
 .. code-block:: taggerscript
 
@@ -70,7 +70,7 @@ Supported Languages for Return Values
 
 English is the output language used for all user interface languages not currently supported with a translation.
 
-Supported translations of the language names from English are based on the translations entered into `Weblate <https://translations.metabrainz.org/projects/picard-plugins/#components>`_ under the "Language Name" component of the "Picard Plugins" project. Any help correcting / completing the current translations, or translation to other languages would be greatly appreciated.
+Supported translations of the language names from English are based on the translations entered into `Weblate <https://translations.metabrainz.org/projects/picard-plugins/#components>`_ under the "Language Name" component of the "Picard Plugins" project. Any help correcting / completing the current translations, or translation into other languages would be greatly appreciated.
 
 
 Source Code

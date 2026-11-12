@@ -6,17 +6,17 @@ Overview
 
 This plugin provides the ability to store and retrieve script variables that persist across tracks and albums. This allows things like finding and storing the earliest recording date of all of the tracks on an album.
 
-There are two types of persistent variables maintained - album variables and session variables. Album variables persist across all tracks on an album. Each album's information is stored separately, and is reset when the album is refreshed. The information is cleared when an album is removed.  Session variables persist across all albums and tracks, and are cleared when Picard is shut down or restarted.
+There are two types of persistent variables maintained - album variables and session variables. Album variables persist across all tracks on an album. Each album's information is stored separately, and is reset when the album is refreshed. The information is cleared when an album is removed. Session variables persist across all albums and tracks, and are cleared when Picard is shut down or restarted.
 
 .. note::
 
-   The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags.
+   The plugin makes no additional calls to the MusicBrainz database, and it does not modify any of the tags in the file metadata.
 
 
 What it Does
 ----------------
 
-This plugin reads the track metadata provided to Picard, extracts the list of associated instrument and vocal performers, and combines the information in a multi-value variable for use in Picard scripts.
+This plugin adds scripting functions that allow you to set, get, unset and clear persistent album-level and session-level variables for use in Picard scripts.
 
 
 Option Settings
@@ -122,7 +122,7 @@ Create a tagging script containing the following:
      )
    )
 
-Now to make the times available as tags for all tracks, you need to create another tagging script which should be run manually just before saving the files.  This script should contain the following:
+Now to make the times available as tags for all tracks, you need to create another tagging script which should be run manually just before saving the files. This script should contain the following:
 
 .. code-block:: taggerscript
 
@@ -165,7 +165,7 @@ The date for the album is now available in the file naming script using ``$get_a
 Example 3
 +++++++++
 
-If you prefer the genre from first track of the album to be the new genre tag for all tracks.
+If you prefer the genre from the first track of the album to be the new genre tag for all tracks.
 
 First, from the `Genres <https://picard-docs.musicbrainz.org/en/config/options_genres.html>`_ section of the Metadata Options, set the maximum number of genres to 1. You might also want to enable the "Fall back on album's artists genres..." setting. This will help ensure that you end up with one and only one genre per track (although they may still be different between tracks at this point).
 
@@ -250,7 +250,7 @@ When a release is a vinyl with the tracks on each side listed with the side as p
 
 .. code-block:: taggerscript
 
-   $if($resarch(%_musicbrainz_tracknumber%,^[0-9]),
+   $if($rsearch(%_musicbrainz_tracknumber%,^[0-9]),
      $noop(Normal numeric track number beginning with a digit)
      $noop(Do nothing)
    ,
@@ -268,7 +268,7 @@ When a release is a vinyl with the tracks on each side listed with the side as p
 
 .. code-block:: taggerscript
 
-   $if($resarch(%_musicbrainz_tracknumber%,^[0-9]),
+   $if($rsearch(%_musicbrainz_tracknumber%,^[0-9]),
      $noop(Normal numeric track number beginning with a digit)
      $noop(Do nothing)
    ,

@@ -31,9 +31,9 @@ There are no option settings for this plugin.
 Examples
 ---------
 
-``$logline(This is a text message.)`` will add "Script Logger: This is a test message." to the log at the ``Info`` level.
+``$logline(This is a test message.)`` will add "Script Logger: This is a test message." to the log at the ``Info`` level.
 
-``$logline(This is another text message.,)`` will add "Script Logger: This is another test message." to the log at the ``Info`` level.
+``$logline(This is another test message.,)`` will add "Script Logger: This is another test message." to the log at the ``Info`` level.
 
 ``$logline(This is an error message.,E)`` will add "Script Logger: This is an error message." to the log at the ``Error`` level.
 

@@ -12,7 +12,7 @@ This plugin provides specialized album and track variables for use in naming scr
 
 .. note::
 
-   This plugin makes no additional calls to the MusicBrainz website api for the information.
+   This plugin makes no additional calls to the MusicBrainz website API for the information.
 
 
 What it Does
@@ -34,7 +34,7 @@ The plugin adds a settings page under the "Plugins" section under "Options..." f
 
 |
 
-These settings will determine the text to use for missing artist information in the ``*_legal_multi``, ``*_alias_multi`` and ``*_alias_sort_multi`` multi-value variables. You can use either the standarized name as the replacement, or specify the text to use. The default text is "n/a", but can be changed to a different value (including an empty string) as required.
+These settings will determine the text to use for missing artist information in the ``*_legal_multi``, ``*_alias_multi`` and ``*_alias_sort_multi`` multi-value variables. You can use either the standardized name as the replacement, or specify the text to use. The default text is "n/a", but can be changed to a different value (including an empty string) as required.
 
 
 Variables Created
@@ -83,7 +83,7 @@ Album Variables
 * **_artists_album_primary_id** - The ID of the primary / first album artist listed
 * **_artists_album_primary_legal** - The primary / first album artist listed (legal name)
 * **_artists_album_primary_sort** - The primary / first album artist listed (sort name)
-* **_artists_album_primary_sort_legal** - The primary / first album artist listed (sort locale alias name)
+* **_artists_album_primary_sort_legal** - The primary / first album artist listed (sort legal name)
 * **_artists_album_primary_std** - The primary / first album artist listed (standardized)
 * **_artists_album_primary_tags** - The primary / first album artist tags (limited to 'Maximum number of genres' setting in Picard configuration), as a multi-value
 
@@ -126,7 +126,7 @@ Track Variables
 * **_artists_track_primary_alias** - The primary / first track artist listed (locale-specific alias name)
 * **_artists_track_primary_alias_sort** - The primary / first track artist listed (locale-specific alias sort name)
 * **_artists_track_primary_cred** - The primary / first track artist listed (as credited)
-* **_artists_track_primary_cred_sort** - The primary / first track artist listed (sort as credited name)
+* **_artists_track_primary_cred_sort** - The primary / first track artist listed (sort name as credited)
 * **_artists_track_primary_id** - The ID of the primary / first track artist listed
 * **_artists_track_primary_legal** - The primary / first track artist listed (legal name)
 * **_artists_track_primary_sort** - The primary / first track artist listed (sort name)
@@ -135,8 +135,8 @@ Track Variables
 
 .. note::
 
-   If a legal name alias is not available for an artist, the standardized name will be used for **_artists_album_additional_legal**, **_artists_album_all_legal**, **_artists_track_additional_legal** and **_artists_track_all_legal**, 'n/a' will be used in **_artists_album_additional_legal_multi**, **_artists_album_all_legal_multi**, **_artists_track_additional_legal_multi** and **_artists_track_all_legal_multi**, and the variables **_artists_album_primary_legal**, **_artists_album_primary_sort_legal**, **_artists_track_primary_legal** and **_artists_track_primary_sort_legal** will not be set if there is no legal name alias available for the primary (first) artist.|
-   If a join phrase is empty, a unicode zero-length space (\\u200B) will be returned in its place. If a type is empty, a value of 'unknown' will be returned in its place.
+   If a legal name alias is not available for an artist, the standardized name will be used for **_artists_album_additional_legal**, **_artists_album_all_legal**, **_artists_track_additional_legal** and **_artists_track_all_legal**, 'n/a' will be used in **_artists_album_additional_legal_multi**, **_artists_album_all_legal_multi**, **_artists_track_additional_legal_multi** and **_artists_track_all_legal_multi**, and the variables **_artists_album_primary_legal**, **_artists_album_primary_sort_legal**, **_artists_track_primary_legal** and **_artists_track_primary_sort_legal** will not be set if there is no legal name alias available for the primary (first) artist.
+   If a join phrase is empty, a Unicode zero-width space (\\u200B) will be returned in its place. If a type is empty, a value of 'unknown' will be returned in its place.
 
 
 Examples
@@ -160,7 +160,7 @@ by `Walk Off The Earth <https://musicbrainz.org/artist/e2a5eaeb-7de7-4ffe-a519-e
 * **_artists_album_all_sort** = Walk off The Earth
 * **_artists_album_all_legal** = Walk off the Earth
 * **_artists_album_all_legal_multi** = \['n/a'\]
-* **_artists_album_all_sort_primary** = Walk Off The Earth
+* **_artists_album_all_sort_primary** = Walk off The Earth
 * **_artists_album_all_types** = \['Group'\]
 * **_artists_album_all_count** = 1
 * **_artists_track_primary_id** = e2a5eaeb-7de7-4ffe-a519-e18e427a5060
@@ -171,21 +171,21 @@ by `Walk Off The Earth <https://musicbrainz.org/artist/e2a5eaeb-7de7-4ffe-a519-e
 * **_artists_track_all_cred** = Gianni and Sarah
 * **_artists_track_all_sort** = Walk off The Earth
 * **_artists_track_all_legal** = Walk off the Earth
-* **_artists_track_all_std_multi** = \['Walk Off The Earth'\]
+* **_artists_track_all_std_multi** = \['Walk off The Earth'\]
 * **_artists_track_all_cred_multi** = \['Gianni and Sarah'\]
 * **_artists_track_all_legal_multi** = \['n/a'\]
 * **_artists_track_all_sort_primary** = Walk off The Earth
 * **_artists_track_all_types** = \['Group'\]
 * **_artists_track_all_count** = 1
 
-Because there is only one artist associated with this single, the **_artists_album_additional\_\***, **_artists_track_additional\_\***, **_artists_album_all_join_phrases**, and **_artists_track_all_join_phrases** variables are not created.
+Because there is only one artist associated with this single, the **_artists_album_additional\_\***, **_artists_track_additional\_\***, **_artists_album_all_join_phrases** and **_artists_track_all_join_phrases** variables are not created.
 
 Because there is no legal name alias for the artist, the **_artists_album_primary_legal**, **_artists_album_primary_sort_legal**, **_artists_track_primary_legal** and **_artists_track_primary_sort_legal** variables are not created.
 
 Example 2:
 ++++++++++
 
-Using the single "`Wrecking Ball <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_" by `Sarah Blackwood <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_ (primary artist) featuring, `Jenni Pleau <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_ & `Emily Bones <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_, the additional artist variables created are:
+Using the single "`Wrecking Ball <https://musicbrainz.org/release/8c759d7a-2ade-4201-abc2-a2a7c1a6ad6c>`_" by `Sarah Blackwood <https://musicbrainz.org/artist/af7e5ea9-bd58-4346-8f78-d672e9f297f7>`_ (primary artist) featuring `Jenni Pleau <https://musicbrainz.org/artist/07fa21a9-c253-4ed0-b711-d63f7965b723>`_ & `Emily Bones <https://musicbrainz.org/artist/541d331c-f041-4895-b8f2-7db9e27dc5ab>`_, the additional artist variables created are:
 
 * **_artists_album_primary_id** = af7e5ea9-bd58-4346-8f78-d672e9f297f7
 * **_artists_album_primary_std** = Sarah Blackwood
@@ -214,7 +214,6 @@ Using the single "`Wrecking Ball <https://musicbrainz.org/release/8c759d7a-2ade-
 * **_artists_track_primary_id** = af7e5ea9-bd58-4346-8f78-d672e9f297f7
 * **_artists_track_primary_std** = Sarah Blackwood
 * **_artists_track_primary_cred** = Sarah Blackwood
-* **_artists_track_primary_sort** = Blackwood, Sarah
 * **_artists_track_primary_sort** = Blackwood, Sarah
 * **_artists_track_primary_legal** = Sarah Nicole Blackwood
 * **_artists_track_additional_id** = \['07fa21a9-c253-4ed0-b711-d63f7965b723', '541d331c-f041-4895-b8f2-7db9e27dc5ab'\]
@@ -273,7 +272,7 @@ Using the album "`Kermit Unpigged <https://musicbrainz.org/release/860fd92f-6899
 * **_artists_track_additional_std_multi** = \['Kermit the Frog'\]
 * **_artists_track_additional_cred_multi** = \['Kermit the Frog'\]
 * **_artists_track_additional_sort_multi** = \['Kermit the Frog'\]
-* **_artists_album_additional_legal_multi** = \['n/a'\]
+* **_artists_track_additional_legal_multi** = \['n/a'\]
 * **_artists_track_all_std** = Linda Ronstadt and Kermit the Frog
 * **_artists_track_all_cred** = Linda Ronstadt and Kermit the Frog
 * **_artists_track_all_sort** = Ronstadt, Linda and Kermit the Frog

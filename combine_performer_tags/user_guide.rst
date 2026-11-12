@@ -20,7 +20,7 @@ This plugin reads the track metadata provided to Picard, extracts the list of as
 Option Settings
 ----------------
 
-The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in ``%_performers%`` variable.
+The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in the ``%_performers%`` variable.
 
 .. image:: cpt_option_settings_0.png
    :alt: Combine Performer Tags Option Settings
@@ -74,7 +74,7 @@ Keyword Sections Assignment
    :align: center
 
 |
-| These settings determine the format for the items in the variable. The format is divided into six parts: the artist; the instrument or vocal; and four user selectable sections for the extra information. This is set out as:
+| These settings determine the format for the items in the variable. The format is divided into six parts: the artist; the instrument or vocal; and four user-selectable sections for the extra information. This is set out as:
 
 With Artist grouping:
 
@@ -108,7 +108,7 @@ Example Output
    :align: center
 
 |
-| The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified.
+| The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine-tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified.
 
 
 Examples

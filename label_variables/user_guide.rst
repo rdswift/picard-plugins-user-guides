@@ -12,7 +12,7 @@ What it Does
 
 This plugin reads the release metadata provided to Picard and exposes the information in a number of additional variables for use in Picard scripts.
 
-This plugin makes no additional calls to the MusicBrainz website api for the information.
+This plugin makes no additional calls to the MusicBrainz website API for the information.
 
 
 Variables Created

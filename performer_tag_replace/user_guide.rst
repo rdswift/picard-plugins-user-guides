@@ -4,7 +4,7 @@ Performer Tag Replace
 Overview
 ---------
 
-This plugin provides the ability to replace text in performer tags. Once installed a settings page will be added to Picard's options, which is where the plugin is configured.
+This plugin provides the ability to replace text in performer tags. Once installed, a settings page will be added to Picard's options, which is where the plugin is configured.
 
 
 What it Does

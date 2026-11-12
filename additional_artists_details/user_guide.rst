@@ -8,7 +8,7 @@ This plugin provides specialized album and track variables with artist details s
 
 .. note::
 
-   This plugin makes additional calls to the MusicBrainz website API for the information, which will slow down retrieving album information from MusicBrainz. This will be particularly noticable when there are many different album or track artists, such as on a \[Various Artists\] release. There is an option to disable track artist processing, which can significantly increase the processing speed if you are only interested in album artist details.
+   This plugin makes additional calls to the MusicBrainz website API for the information, which will slow down retrieving album information from MusicBrainz. This will be particularly noticeable when there are many different album or track artists, such as on a \[Various Artists\] release. There is an option to disable track artist processing, which can significantly increase the processing speed if you are only interested in album artist details.
 
 
 What it Does
@@ -18,7 +18,7 @@ This plugin reads the album and track metadata provided to Picard, extracts the 
 
 The plugin maintains a cache of artist and area information retrieved from MusicBrainz to avoid making multiple API calls for the same information. This can significantly reduce the time required to load an album by eliminating unnecessary API calls for information already retrieved.
 
-There is a persistent cache system that utilizes a sqlite file to retain the information from the cache for use in subsequent Picard sessions.
+There is a persistent cache system that utilizes a SQLite file to retain the information from the cache for use in subsequent Picard sessions.
 
 Area and (optionally) artist information is saved to the persistent cache file. Area information usually provides the most additional API calls, and thus is the largest contributor to delays when loading an album. For this reason, area information is always saved to the persistent cache file if it is enabled.
 
@@ -28,7 +28,7 @@ When artist and area information is retrieved from MusicBrainz, if the persisten
 Option Settings
 ----------------
 
-The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to processing track artists and detail included in the artist location variables' content.
+The plugin adds a settings page under the "Plugins" section under "Options..." from Picard's main menu. This allows you to control how the plugin operates with respect to processing track artists and the details included in the artist location variables' content.
 
 .. image:: option_settings.png
    :alt: Additional Artists Details Option Settings
@@ -51,7 +51,7 @@ Persistent Cache
 
 There is an option to determine whether the persistent cache system is used. It is **strongly** recommended that this be enabled.
 
-All area records, and optionally artist records, are stored to a persistent cache sqlite database file as they are retrieved from the MusicBrainz API. This is to allow the information to be used in subsequent Picard sessions without having to repeat the API calls. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access.
+All area records, and optionally artist records, are stored to a persistent cache SQLite database file as they are retrieved from the MusicBrainz API. This is to allow the information to be used in subsequent Picard sessions without having to repeat the API calls. The path and file name of the persistent cache file is displayed, and there is a button to open the directory in your system file browser for easy access.
 
 Area information is always stored in the persistent cache file, because area lookups produce the largest amount of API calls that impact album loading time. Artist information storage in the persistent cache file is optional, but recommended.
 
@@ -131,6 +131,7 @@ Variables specific to the individual artists will be created using the artist MB
 * **\_artist_\{artist_id\}_end_country** - The end two-character country code of the artist
 * **\_artist_\{artist_id\}_end_location** - The end location of the artist
 * **\_artist_\{artist_id\}_gender** - The gender of the artist
+* **\_artist_\{artist_id\}_location** - The current location of the artist
 * **\_artist_\{artist_id\}_name** - The name of the artist
 * **\_artist_\{artist_id\}_sort_name** - The sort name of the artist
 * **\_artist_\{artist_id\}_type** - The type of artist (person, group, etc.)
@@ -202,7 +203,7 @@ Sarah Blackwood (primary artist):
 * **\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_sort_name** = 'Blackwood, Sarah'
 * **\_artist_af7e5ea9_bd58_4346_8f78_d672e9f297f7_type** = 'Person'
 
-Jenny Pleau (additional artist)
+Jenni Pleau (additional artist):
 
 * **\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_country** = 'CA'
 * **\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_gender** = 'Female'
@@ -211,7 +212,7 @@ Jenny Pleau (additional artist)
 * **\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_sort_name** = 'Pleau, Jenni'
 * **\_artist_07fa21a9_c253_4ed0_b711_d63f7965b723_type** = 'Person'
 
-Emily Bones (additional artist)
+Emily Bones (additional artist):
 
 * **\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_gender** = 'Female'
 * **\_artist_541d331c_f041_4895_b8f2_7db9e27dc5ab_name** = 'Emily Bones'
@@ -263,7 +264,7 @@ These could be used to set a **%country%** tag to the country code of the (prima
 
 .. code-block:: taggerscript
 
-   $set(country,$if2($getmulti(%_aad_albumartists_country%,0),$getmulti(%_aad_albumartists_begin_country%,0),$getmulti(%_aad_albumartists_end_country%,0)))
+   $set(country,$if2($getmulti(%_aad_albumartists_countries%,0),$getmulti(%_aad_albumartists_begin_countries%,0),$getmulti(%_aad_albumartists_end_countries%,0)))
 
 Source Code
 ----------------

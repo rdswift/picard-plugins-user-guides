@@ -6,7 +6,7 @@ Overview
 
 This plugin dumps the album information retrieved from MusicBrainz to a JSON file. This can be a useful reference when developing album or track metadata processing plugins.
 
-Once installed a settings page will be added to Picard's options, which is where the plugin is configured.
+Once installed, a settings page will be added to Picard's options, which is where the plugin is configured.
 
 
 What it Does

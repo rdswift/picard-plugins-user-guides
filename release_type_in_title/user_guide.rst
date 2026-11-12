@@ -20,7 +20,7 @@ The release types to include, the keywords to check, and the text to add are def
 Option Settings
 ----------------
 
-The settings panel allows the user to provide a list of the tags to keep.
+The settings panel allows the user to select the release types to append to the release title, the text to append for each type, and the keywords to check when determining whether the type already appears in the title.
 
 .. image:: release_type_in_title_settings.png
    :alt: Default Settings Page
