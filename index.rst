@@ -31,6 +31,7 @@ MusicBrainz Picard is a powerful and flexible application for tagging and organi
    key_wheel_converter/user_guide
    label_variables/user_guide
    language_name/user_guide
+   local_server_rate_control/user_guide
    performer_tag_replace/user_guide
    persistent_variables/user_guide
    release_type_in_title/user_guide
