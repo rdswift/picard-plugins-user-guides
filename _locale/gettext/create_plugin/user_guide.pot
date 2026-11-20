@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.08.25\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-25 11:17-0600\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,7 +73,7 @@ msgid "**Plugin Categories**: The categories to which the plugin belongs. This i
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:29
-msgid "**Plugin Description**: A brief description of the plugin's functionality (2000 characters or less), and may contain markdown. This is used in the plugin's metadata, and is also added to the ``README.md`` file for the plugin. The plugin's short description is also added to the plugin's metadata, and is used in the plugin listing on the Picard website. The short description is generated automatically by taking the first paragraph of the plugin description, up to a maximum of 200 characters."
+msgid "**Plugin Description**: A brief description of the plugin's functionality (2000 characters or less), which may contain markdown. This is used in the plugin's metadata, and is also added to the ``README.md`` file for the plugin. The plugin's short description is also added to the plugin's metadata, and is used in the plugin listing on the Picard website. The short description is generated automatically by taking the first paragraph of the plugin description, up to a maximum of 200 characters."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:30
@@ -169,7 +169,7 @@ msgid "**Options page and settings**: Code template for adding plugin-specific u
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:71
-msgid "**Album post-removal processing**: Code template for the hook called after a file has been removed from a track (on the right-hand pane of Picard)."
+msgid "**Album post-removal processing**: Code template for the hook called after an album has been removed from Picard."
 msgstr ""
 
 #: ../../create_plugin/user_guide.rst:72

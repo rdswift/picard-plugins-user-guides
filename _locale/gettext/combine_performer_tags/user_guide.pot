@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgid "Option Settings"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:23
-msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in ``%_performers%`` variable."
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to processing track performance artists and the attribute details included in the ``%_performers%`` variable."
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:25
@@ -106,7 +106,7 @@ msgid "Keyword Sections Assignment"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:77
-msgid "These settings determine the format for the items in the variable. The format is divided into six parts: the artist; the instrument or vocal; and four user selectable sections for the extra information. This is set out as:"
+msgid "These settings determine the format for the items in the variable. The format is divided into six parts: the artist; the instrument or vocal; and four user-selectable sections for the extra information. This is set out as:"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:79
@@ -136,7 +136,7 @@ msgid "Example Output"
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:111
-msgid "The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified."
+msgid "The example output section at the bottom of the settings page shows how the information will be displayed in the multi-value variable. This is intended to help you fine-tune your settings so that the information is displayed in the format that you prefer. The example is updated each time a setting is modified."
 msgstr ""
 
 #: ../../combine_performer_tags/user_guide.rst:115

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 12:47-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgid "The following examples have been graciously provided by **hiccup**:"
 msgstr ""
 
 #: ../../language_name/user_guide.rst:31
-msgid "You will need to use a script to tag your files with the full language names that this plugins makes available. A basic script to e.g. populate the 'language' tag with the full language name of the work could be:"
+msgid "You will need to use a script to tag your files with the full language names that this plugin makes available. A basic script to e.g. populate the 'language' tag with the full language name of the work could be:"
 msgstr ""
 
 #: ../../language_name/user_guide.rst:37
@@ -89,7 +89,7 @@ msgid "English is the output language used for all user interface languages not 
 msgstr ""
 
 #: ../../language_name/user_guide.rst:73
-msgid "Supported translations of the language names from English are based on the translations entered into `Weblate <https://translations.metabrainz.org/projects/picard-plugins/#components>`_ under the \"Language Name\" component of the \"Picard Plugins\" project. Any help correcting / completing the current translations, or translation to other languages would be greatly appreciated."
+msgid "Supported translations of the language names from English are based on the translations entered into `Weblate <https://translations.metabrainz.org/projects/picard-plugins/#components>`_ under the \"Language Name\" component of the \"Picard Plugins\" project. Any help correcting / completing the current translations, or translation into other languages would be greatly appreciated."
 msgstr ""
 
 #: ../../language_name/user_guide.rst:77

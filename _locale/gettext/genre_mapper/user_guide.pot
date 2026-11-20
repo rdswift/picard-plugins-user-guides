@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,85 +33,177 @@ msgid "What it Does"
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:13
-msgid "This plugin reads the track metadata provided to Picard, extracts the list of associated instrument and vocal performers, and combines the information in a multi-value variable for use in Picard scripts."
+msgid "This plugin reads the track metadata provided to Picard, extracts the list of associated genres, and maps the existing genres to new values based on the configured replacement pairs."
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:17
-msgid "Option Settings"
+msgid "The plugin does not add any new genres to the \"genre\" tag. It only modifies existing genres based on the configured replacement pairs."
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:19
-msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to remapping the genres by providing a list of the original/replacement pairs used to modify the genres provided in the \"genre\" tag. Each pair must be entered on a separate line in the form:"
+msgid "All genres will be output in title case (e.g., \"Rock\" instead of \"rock\") regardless of the case used in the replacement pairs."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:23
+msgid "Option Settings"
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:25
-msgid "Unless the \"Match tests are entered as regular expressions\" option is enabled, supported wildcards in the test string part of the mapping include '*' and '?' to match any number of characters and a single character respectively. If the \"Match tests are entered as regular expressions\" option is enabled, then the match test string portion of **every** pair must be entered as a regular expression. Leading and trailing spaces will be removed from all match test strings and replacement strings before processing."
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to remapping the genres."
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:27
-msgid "Blank lines and lines beginning with an equals sign (=) will be ignored. If the replacement part of the pair is blank, any matching genres will be removed. Case-insensitive tests are used when matching. Replacements will be made in the order they are found in the list."
+msgid "Genre Mapper Option Settings"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:29
-msgid "There is also a setting which allows the user to choose whether or not to apply the first matching pair only, or continue processing the remaining pairs with the updated genre. By default, all of the pairs are processed."
+#: ../../genre_mapper/user_guide.rst:34
+msgid "Enable genre mapping"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:33
-msgid "Examples"
+#: ../../genre_mapper/user_guide.rst:36
+msgid "This setting allows you to enable or disable the genre mapping functionality. If disabled, the plugin will not modify any genres."
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:35
-msgid "**Example 1**"
+#: ../../genre_mapper/user_guide.rst:40
+msgid "Match tests are entered as regular expressions"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:37
-msgid "Suppose that you want to combine all the different types of rock genres (e.g. Country Rock, Hard Rock, Progressive Rock, Punk Rock, Rock 'n' Roll) into a single \"Rock\" entry. This could be done using the following matching pairs configuration:"
+#: ../../genre_mapper/user_guide.rst:42
+msgid "This setting allows you to specify whether the match test strings in the replacement pairs are treated as regular expressions or as simple wildcard patterns."
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:45
-msgid "**Example 2**"
+#: ../../genre_mapper/user_guide.rst:44
+msgid "If enabled, the match test string portion of **every** pair must be a valid regular expression. Invalid regular expressions will be ignored and logged as errors. Otherwise, the match test strings can use the '*' and '?' wildcards to match any number of characters and a single character respectively."
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:47
-msgid "Similar to Example 1, except that you want to keep \"Punk Rock\" separate from \"Rock\". This could be done by enabling the \"Apply only the first matching replacement\" option and using the following matching pairs configuration:"
+#: ../../genre_mapper/user_guide.rst:46
+msgid "If enabled, the replacement portion of the pair can include backreferences to capture groups specified in the match test string. Otherwise, the replacement portion of the pair is treated as a literal string and will not be interpreted as a wildcard pattern."
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:57
-msgid "This would cause a genre of \"Punk Rock\" to match the first test, keep the genre as \"Punk Rock\" and stop processing that genre entry. If the \"Apply only the first matching replacement\" option was not enabled, processing would continue and the next match would change the genre to \"Rock\"."
+#: ../../genre_mapper/user_guide.rst:50
+msgid "For more information about regular expressions, please refer to the `Python Regular Expressions <https://docs.python.org/3/library/re.html>`_ documentation, `Wikipedia <https://en.wikipedia.org/wiki/Regular_expression>`_, and the `Regular Expressions Tutorial <https://www.geeksforgeeks.org/dsa/write-regular-expressions/>`_."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:54
+msgid "Apply only the first matching replacement"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:56
+msgid "This setting allows you to choose whether or not to apply the first matching pair only, or continue processing the remaining pairs with the updated genre. By default, all of the pairs are processed."
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:60
-msgid "**Example 3**"
+msgid "Case-sensitive matching"
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:62
-msgid "Similar to Example 2, except that you want to keep processing rather than stop on the first match. This could be done by disabling the \"Apply only the first matching replacement\" option and using the following matching pairs configuration:"
+msgid "This setting determines whether or not the match tests are performed as case-sensitive. This applies to both regular expressions and wildcard patterns. By default, the match tests are case-insensitive."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:66
+msgid "Verbose debug logging"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:68
+msgid "This setting allows you to enable or disable verbose debug logging. If enabled, the plugin will log additional information about the processing of the genre mapping, which can be useful for troubleshooting. Errors are always logged regardless of this setting."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:72
+msgid "Replacement Pairs"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:74
+msgid "This setting allows you to specify the list of original/replacement pairs used to modify the genres provided in the \"genre\" tag. Each pair must be entered on a separate line in the form:"
 msgstr ""
 
 #: ../../genre_mapper/user_guide.rst:80
+msgid "If the \"Match tests are entered as regular expressions\" option is disabled, supported wildcards in the test string part of the mapping include '*' and '?' to match any number of characters and a single character respectively. The replacement portion of the pair is treated as a literal string and will not be interpreted as a wildcard pattern."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:82
+msgid "If the \"Match tests are entered as regular expressions\" option is enabled, then the match test string portion of **every** pair must be entered as a regular expression. The replacement portion of the pair can include backreferences to capture groups specified in the match test string."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:84
+msgid "Blank lines and lines beginning with an equals sign (=) will be ignored. This allows you to add comments and blank lines to the replacement pairs configuration for readability."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:86
+msgid "Leading and trailing spaces will be removed from all match test strings and replacement strings before processing."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:88
+msgid "If the replacement part of the pair is blank, any matching genres will be removed."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:90
+msgid "Replacements will be made in the order they are found in the list."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:94
+msgid "Examples"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:96
+msgid "**Example 1**"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:98
+msgid "Suppose that you want to combine all the different types of rock genres (e.g. Country Rock, Hard Rock, Progressive Rock, Punk Rock, Rock 'n' Roll) into a single \"Rock\" entry. This could be done using the following matching pairs configuration:"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:106
+msgid "**Example 2**"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:108
+msgid "Similar to Example 1, except that you want to keep \"Punk Rock\" separate from \"Rock\". This could be done by enabling the \"Apply only the first matching replacement\" option and using the following matching pairs configuration:"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:118
+msgid "This would cause a genre of \"Punk Rock\" to match the first test, keep the genre as \"Punk Rock\" and stop processing that genre entry. If the \"Apply only the first matching replacement\" option was not enabled, processing would continue and the next match would change the genre to \"Rock\"."
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:121
+msgid "**Example 3**"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:123
+msgid "Similar to Example 2, except that you want to keep processing rather than stop on the first match. This could be done by disabling the \"Apply only the first matching replacement\" option and using the following matching pairs configuration:"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:141
 msgid "This would cause a genre of \"Punk Rock\" to match the first test, changing the genre to \"Temp1\" (not matched in any of the following processing pairs) and continue processing. The final processing pair matches the \"Temp1\" genre set earlier and changes the genre back to \"Punk Rock\"."
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:83
+#: ../../genre_mapper/user_guide.rst:144
 msgid "**Example 4**"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:85
+#: ../../genre_mapper/user_guide.rst:146
 msgid "Perhaps you want to remove all \"Pop\" genres, including genres where \"Pop\" is part of a hyphenated word (e.g. K-Pop) but not where \"pop\" is part of another word (e.g. Popular). This could be done by using the following matching pairs configuration:"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:101
+#: ../../genre_mapper/user_guide.rst:162
 msgid "**Example 5**"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:103
+#: ../../genre_mapper/user_guide.rst:164
 msgid "Similar to Example 4, except that the \"Match tests are entered as regular expressions\" option is enabled, allowing the matching pairs configuration to be simplified to a single line as:"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:114
+#: ../../genre_mapper/user_guide.rst:174
+msgid "**Example 6**"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:176
+msgid "If you want to change all genres such as \"Pop Rock\", \"Hard Rock\", \"Progressive Rock\", \"Punk Rock\", etc. to a format of \"Rock (type)\" (e.g., \"Rock (Pop)\", \"Rock (Hard)\", \"Rock (Progressive)\", \"Rock (Punk)\"), you can use the following matching pairs configuration with the \"Match tests are entered as regular expressions\" option enabled:"
+msgstr ""
+
+#: ../../genre_mapper/user_guide.rst:185
 msgid "Source Code"
 msgstr ""
 
-#: ../../genre_mapper/user_guide.rst:116
+#: ../../genre_mapper/user_guide.rst:187
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-genre-mapper>`_."
 msgstr ""

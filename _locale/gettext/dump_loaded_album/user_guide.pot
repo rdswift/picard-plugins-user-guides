@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2026.08.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 13:46-0600\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgid "This plugin dumps the album information retrieved from MusicBrainz to a J
 msgstr ""
 
 #: ../../dump_loaded_album/user_guide.rst:9
-msgid "Once installed a settings page will be added to Picard's options, which is where the plugin is configured."
+msgid "Once installed, a settings page will be added to Picard's options, which is where the plugin is configured."
 msgstr ""
 
 #: ../../dump_loaded_album/user_guide.rst:13

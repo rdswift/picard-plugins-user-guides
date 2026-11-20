@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,9 +21,9 @@ msgid "Page Not Found"
 msgstr ""
 
 #: ../../not_found.rst:8
-msgid "We're sorry but we are unable to find the requested page.  Please use the table of contents or the search box in the left-hand sidebar to locate your topic."
+msgid "We're sorry, but we are unable to find the requested page. Please use the table of contents or the search box in the left-hand sidebar to locate your topic."
 msgstr ""
 
 #: ../../not_found.rst:11
-msgid "If you believe that you have received this message in error, please report it in a `ticket <https://tickets.metabrainz.org/issues/?filter=12025>`_ under the Picard project (Documentation component).  Thanks."
+msgid "If you believe that you have received this message in error, please report it in a `ticket <https://tickets.metabrainz.org/issues/?filter=12025>`_ under the Picard project (Documentation component). Thanks."
 msgstr ""

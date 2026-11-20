@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "What it Does"
 msgstr ""
 
 #: ../../search_engine_lookup/user_guide.rst:13
-msgid "This plugin adds a right click option on a cluster, providing the ability to lookup the cluster using a search engine in a browser window. It also provides a right click option on album and track items in the right-hand Album pane, allowing a search engine lookup for the cover art associated with the selected album or track."
+msgid "This plugin adds a right-click option on a cluster, providing the ability to lookup the cluster using a search engine in a browser window. It also provides a right click option on album and track items in the right-hand Album pane, allowing a search engine lookup for the cover art associated with the selected album or track."
 msgstr ""
 
 #: ../../search_engine_lookup/user_guide.rst:15
@@ -53,7 +53,7 @@ msgid "options image"
 msgstr ""
 
 #: ../../search_engine_lookup/user_guide.rst:28
-msgid "When adding or editing a provider, checkmarks to the right of each field indicate whether or not the information in the field is valid. The title is valid when it contains at least two non-space characters, does not begin or end with a space, and is not the same as the title of another existing provider. The URL is valid when it contains the search replacement parameter ``%search%`` and does not begin or end with, or contain any spaces. The \"Save\" button will be disabled until both fields are valid."
+msgid "When adding or editing a provider, checkmarks to the right of each field indicate whether or not the information in the field is valid. The title is valid when it contains at least two non-space characters, does not begin or end with a space, and is not the same as the title of another existing provider. The URL is valid when it contains the search replacement parameter ``%search%`` and does not begin or end with, or contain, any spaces. The \"Save\" button will be disabled until both fields are valid."
 msgstr ""
 
 #: ../../search_engine_lookup/user_guide.rst:30

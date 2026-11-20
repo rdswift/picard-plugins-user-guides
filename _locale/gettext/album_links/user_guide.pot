@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Bob Swift.
+# This file is distributed under the same license as the Picard Plugins User Guides package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../album_links/user_guide.rst:2
+msgid "Album Links"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:7
+msgid "This plugin provides quick links to an album's related web pages from the :menuselection:`Plugin Tools` menu. The types of links to be displayed are selected in the options settings page for the plugin."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:11
+msgid "What it Does"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:13
+msgid "This plugin reads the metadata provided to Picard for the selected album, extracts the list of URL relationships, and displays a dialog window with clickable links to each of the URLs. The dialog is displayed by selecting :menuselection:`Plugin Tools --> Album links` from the main menu."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:15
+msgid "Album Links Action Menu"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:21
+msgid "The dialog window displays the links grouped by the link type. The link types to display are selected in the option settings page for the plugin."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:23
+msgid "Album Links Dialog"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:29
+msgid "Clicking on a link will open it in the system default browser."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:31
+msgid "The links can also be displayed with information identifying the source of the link relationship. This is based on a setting in the option settings page for the plugin."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:33
+msgid "Album Links Dialog (with sources)"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:39
+msgid "When the source information is displayed, it follows one of four standard formats:"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:41
+msgid "\"**Release**\" indicates that it comes from a release relationship."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:43
+msgid "\"**Release Group**\" indicates that it comes from a release group relationship."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:45
+msgid "\"**Track x:y**\" indicates that it comes from a recording relationship associated with one of the tracks. In this case \"x\" is the medium number (such as the disc number), and \"y\" is the number of the track on that medium."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:47
+msgid "\"**Track x:y Work**\" indicates that it comes from a work relationship associated with the track's recording relationship. Similar to the previous format, \"x\" is the medium number, and \"y\" is the number of the track on that medium."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:51
+msgid "Option Settings"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:53
+msgid "The plugin adds a settings page under the \"Plugins\" section under \"Options...\" from Picard's main menu. This allows you to control how the plugin operates with respect to displaying the links."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:55
+msgid "Album Links Option Settings"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:62
+msgid "Show the link source relationship"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:64
+msgid "This option determines whether or not the source relationship information for the link is displayed in the Album Links dialog."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:67
+msgid "Link Types"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:69
+msgid "This provides a list of the supported link types, and allows enabling the display for each type individually. Links will only be displayed in the Album Links dialog if they belong to one of the link types that are enabled (checked) in this list. Unchecked types will be ignored and will not be displayed in the Album Links dialog."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:73
+msgid "Examples"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:75
+msgid "There are no examples."
+msgstr ""
+
+#: ../../album_links/user_guide.rst:79
+msgid "Source Code"
+msgstr ""
+
+#: ../../album_links/user_guide.rst:81
+msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-album-links>`_."
+msgstr ""

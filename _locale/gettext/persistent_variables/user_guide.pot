@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,11 +29,11 @@ msgid "This plugin provides the ability to store and retrieve script variables t
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:9
-msgid "There are two types of persistent variables maintained - album variables and session variables. Album variables persist across all tracks on an album. Each album's information is stored separately, and is reset when the album is refreshed. The information is cleared when an album is removed.  Session variables persist across all albums and tracks, and are cleared when Picard is shut down or restarted."
+msgid "There are two types of persistent variables maintained - album variables and session variables. Album variables persist across all tracks on an album. Each album's information is stored separately, and is reset when the album is refreshed. The information is cleared when an album is removed. Session variables persist across all albums and tracks, and are cleared when Picard is shut down or restarted."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:13
-msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not remove any of the ``%performer:*%`` tags."
+msgid "The plugin makes no additional calls to the MusicBrainz database, and it does not modify any of the tags in the file metadata."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:17
@@ -41,7 +41,7 @@ msgid "What it Does"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:19
-msgid "This plugin reads the track metadata provided to Picard, extracts the list of associated instrument and vocal performers, and combines the information in a multi-value variable for use in Picard scripts."
+msgid "This plugin adds scripting functions that allow you to set, get, unset and clear persistent album-level and session-level variables for use in Picard scripts."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:23
@@ -147,7 +147,7 @@ msgid "Create a tagging script containing the following:"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:125
-msgid "Now to make the times available as tags for all tracks, you need to create another tagging script which should be run manually just before saving the files.  This script should contain the following:"
+msgid "Now to make the times available as tags for all tracks, you need to create another tagging script which should be run manually just before saving the files. This script should contain the following:"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:149
@@ -171,7 +171,7 @@ msgid "Example 3"
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:168
-msgid "If you prefer the genre from first track of the album to be the new genre tag for all tracks."
+msgid "If you prefer the genre from the first track of the album to be the new genre tag for all tracks."
 msgstr ""
 
 #: ../../persistent_variables/user_guide.rst:170

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgid "**$key2openkey(key)** returns the key string ``key`` in open key format."
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:17
-msgid "**$key2standard(key[,symbols])** returns the key string ``key`` in standard key format.  If the optional argument ``symbols`` is set, then the '♭' and '#' symbols will be used, rather than spelling out '-Flat' and '-Sharp'."
+msgid "**$key2standard(key[,symbols])** returns the key string ``key`` in standard key format. If the optional argument ``symbols`` is set, then the '♭' and '#' symbols will be used, rather than spelling out '-Flat' and '-Sharp'."
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:18
@@ -53,7 +53,7 @@ msgid "**$key2traktor(key)** returns the key string ``key`` in traktor key forma
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:20
-msgid "The ``key`` argument can be entered in any of the supported formats, such as '2B' (camelot), '6d' (open key), 'A♭ Minor' (standard with symbols), 'A-Flat Minor' (standard with text) or 'C#' (traktor).  If the ``key`` argument is not recognized as one of the standard keys in the supported formats, then an empty string will be returned."
+msgid "The ``key`` argument can be entered in any of the supported formats, such as '2B' (camelot), '6d' (open key), 'A♭ Minor' (standard with symbols), 'A-Flat Minor' (standard with text) or 'C#' (traktor). If the ``key`` argument is not recognized as one of the standard keys in the supported formats, then an empty string will be returned."
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:24
@@ -69,7 +69,7 @@ msgid "Examples"
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:32
-msgid "The following tables shows the outputs of the various functions for different key inputs:"
+msgid "The following table shows the outputs of the various functions for different key inputs:"
 msgstr ""
 
 #: ../../key_wheel_converter/user_guide.rst:52

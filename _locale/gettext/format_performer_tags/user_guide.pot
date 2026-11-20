@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2025, Bob Swift.
+# Copyright (C) 2026, Bob Swift.
 # This file is distributed under the same license as the Picard Plugins User Guides package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Picard Plugins User Guides v2025.12.31\n"
+"Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-31 07:34-0700\n"
+"POT-Creation-Date: 2026-11-20 12:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgid "Here is some background information about these keywords:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:54
-msgid "MusicBrainz' database allows to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store, and offer Picard:"
+msgid "MusicBrainz' database allows you to add and store keywords (attributes) that will refine or additionally describe the role of a performer for a recording. For an artist performing music on an instrument, these are the three attributes (keywords) that MusicBrainz can store and offer to Picard:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:56
@@ -153,7 +153,7 @@ msgid "Picard can retrieve and display these keywords and will list them all tog
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:92
-msgid "The problem with this is that it is a bit indistinct if these keywords say something about the instrument, the artist and their performing role, the voice's register, or the persons relation to the group/orchestra. For instance:"
+msgid "The problem with this is that it is a bit indistinct if these keywords say something about the instrument, the artist and their performing role, the voice's register, or the person's relation to the group/orchestra. For instance:"
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:94
@@ -161,7 +161,7 @@ msgid "'additional' is referring to instrumentation. For example 'additional per
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:95
-msgid "'guest' is referring to the performer as a person. Indicating that they are a guest in that band/orchestra instead of a regular member."
+msgid "'guest' is referring to the performer as a person. This indicates that they are a guest in that band/orchestra instead of a regular member."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:96
@@ -197,7 +197,7 @@ msgid "In the settings panel you can define in what section (at what location) y
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:128
-msgid "You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parenthesis brackets (), or maybe you prefer less common brackets such as [] or \\<\\>. Note that using default parenthesis might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc."
+msgid "You can also define what characters you want to use for delimiting or surrounding the keywords. For some situations you might want to use the more common parentheses (), or maybe you prefer less common brackets such as [] or \\<\\>. Note that using default parentheses might confuse possible subsequent tagging formulas in the music player/manager of your choice. You can also just leave them blank, or use commas, spaces, etc."
 msgstr ""
 
 #: ../../format_performer_tags/user_guide.rst:132
