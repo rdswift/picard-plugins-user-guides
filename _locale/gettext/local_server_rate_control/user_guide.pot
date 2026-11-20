@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Picard Plugins User Guides v2026.11.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-20 12:36-0600\n"
+"POT-Creation-Date: 2026-11-20 12:47-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,18 +72,22 @@ msgstr ""
 msgid "If the configured server is one of the MusicBrainz servers or one of the other reserved servers, then the :guilabel:`Update` button will be disabled."
 msgstr ""
 
-#: ../../local_server_rate_control/user_guide.rst:45
+#: ../../local_server_rate_control/user_guide.rst:43
+msgid "Update Button Disabled"
+msgstr ""
+
+#: ../../local_server_rate_control/user_guide.rst:50
 msgid "Examples"
 msgstr ""
 
-#: ../../local_server_rate_control/user_guide.rst:47
+#: ../../local_server_rate_control/user_guide.rst:52
 msgid "There are no examples."
 msgstr ""
 
-#: ../../local_server_rate_control/user_guide.rst:51
+#: ../../local_server_rate_control/user_guide.rst:56
 msgid "Source Code"
 msgstr ""
 
-#: ../../local_server_rate_control/user_guide.rst:53
+#: ../../local_server_rate_control/user_guide.rst:58
 msgid "The source code for this plugin is available on `GitHub <https://github.com/rdswift/picard-plugin-local-server-rate-control>`_."
 msgstr ""

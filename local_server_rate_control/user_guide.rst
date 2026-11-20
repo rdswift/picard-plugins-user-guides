@@ -40,6 +40,11 @@ This displays the currently configured server, which is the one that will be upd
 
 If the configured server is one of the MusicBrainz servers or one of the other reserved servers, then the :guilabel:`Update` button will be disabled.
 
+.. image:: update_disabled.png
+   :alt: Update Button Disabled
+   :align: center
+
+|
 
 Examples
 ---------
